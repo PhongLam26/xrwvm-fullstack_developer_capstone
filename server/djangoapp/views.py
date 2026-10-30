@@ -10,7 +10,7 @@ from django.http import HttpResponse, JsonResponse
 from django.middleware.csrf import get_token
 from django.template.loader import render_to_string
 from django.views.decorators.csrf import ensure_csrf_cookie
-from django.views.decorators.http import require_GET, require_POST
+from django.views.decorators.http import require_GET, require_POST, require_http_methods
 
 from . import restapis
 from .models import CarMake, CarModel
@@ -65,9 +65,7 @@ def _proxy_get(endpoint, key, not_found_message=None):
             status=502,
         )
     if not result and not_found_message:
-        return JsonResponse(
-            {"status": 404, "error": not_found_message}, status=404
-        )
+        return JsonResponse({"status": 404, "error": not_found_message}, status=404)
     return JsonResponse({"status": 200, key: result})
 
 
@@ -81,7 +79,9 @@ def csrf_token(request):
 def login_user(request):
     payload = _body_json(request)
     if payload is None:
-        return JsonResponse({"status": 400, "error": "Expected a JSON object."}, status=400)
+        return JsonResponse(
+            {"status": 400, "error": "Expected a JSON object."}, status=400
+        )
 
     username = str(payload.get("userName", payload.get("username", ""))).strip()
     password = str(payload.get("password", ""))
@@ -107,17 +107,19 @@ def login_user(request):
     )
 
 
-@require_POST
+@require_http_methods(["GET", "POST"])
 def logout_user(request):
     logout(request)
-    return JsonResponse({"status": 200, "message": "Logged out."})
+    return JsonResponse({"userName": "", "status": 200, "message": "Logged out."})
 
 
 @require_POST
 def register_user(request):
     payload = _body_json(request)
     if payload is None:
-        return JsonResponse({"status": 400, "error": "Expected a JSON object."}, status=400)
+        return JsonResponse(
+            {"status": 400, "error": "Expected a JSON object."}, status=400
+        )
 
     username = str(payload.get("username", "")).strip()
     first_name = str(payload.get("first_name", "")).strip()
@@ -140,7 +142,9 @@ def register_user(request):
             status=409,
         )
     if "@" not in email or "." not in email.rsplit("@", 1)[-1]:
-        return JsonResponse({"status": 400, "error": "Enter a valid email address."}, status=400)
+        return JsonResponse(
+            {"status": 400, "error": "Enter a valid email address."}, status=400
+        )
     if len(password) < 8:
         return JsonResponse(
             {"status": 400, "error": "Password must contain at least 8 characters."},
@@ -200,31 +204,55 @@ def get_dealer_reviews(request, dealer_id):
 @require_POST
 def add_review(request):
     if not request.user.is_authenticated:
-        return JsonResponse({"status": 401, "error": "Sign in to submit a review."}, status=401)
+        return JsonResponse(
+            {"status": 401, "error": "Sign in to submit a review."}, status=401
+        )
 
     payload = _body_json(request)
     if payload is None:
-        return JsonResponse({"status": 400, "error": "Expected a JSON object."}, status=400)
-    required = ("dealership", "review", "purchase_date", "car_make", "car_model", "car_year")
+        return JsonResponse(
+            {"status": 400, "error": "Expected a JSON object."}, status=400
+        )
+    required = (
+        "dealership",
+        "review",
+        "purchase_date",
+        "car_make",
+        "car_model",
+        "car_year",
+    )
     if any(not str(payload.get(field, "")).strip() for field in required):
-        return JsonResponse({"status": 400, "error": "All review fields are required."}, status=400)
+        return JsonResponse(
+            {"status": 400, "error": "All review fields are required."}, status=400
+        )
 
     try:
         dealer_id = int(payload["dealership"])
         car_year = int(payload["car_year"])
         date.fromisoformat(str(payload["purchase_date"]))
     except (TypeError, ValueError):
-        return JsonResponse({"status": 400, "error": "Dealer, date, or model year is invalid."}, status=400)
+        return JsonResponse(
+            {"status": 400, "error": "Dealer, date, or model year is invalid."},
+            status=400,
+        )
     if not 2015 <= car_year <= 2023:
-        return JsonResponse({"status": 400, "error": "Car year must be from 2015 to 2023."}, status=400)
+        return JsonResponse(
+            {"status": 400, "error": "Car year must be from 2015 to 2023."}, status=400
+        )
 
     try:
         dealer = restapis.get_request(f"fetchDealer/{dealer_id}")
         if not dealer:
-            return JsonResponse({"status": 404, "error": "Dealer was not found."}, status=404)
-        sentiment = restapis.analyze_review_sentiments(str(payload["review"]))["sentiment"]
+            return JsonResponse(
+                {"status": 404, "error": "Dealer was not found."}, status=404
+            )
+        sentiment = restapis.analyze_review_sentiments(str(payload["review"]))[
+            "sentiment"
+        ]
         user = request.user
-        display_name = " ".join(part for part in (user.first_name, user.last_name) if part)
+        display_name = " ".join(
+            part for part in (user.first_name, user.last_name) if part
+        )
         review = restapis.post_review(
             {
                 "name": display_name or user.username,

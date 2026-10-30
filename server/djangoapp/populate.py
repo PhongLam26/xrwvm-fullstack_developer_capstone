@@ -5,7 +5,6 @@ from django.db import transaction
 
 from .models import CarMake, CarModel
 
-
 CAR_RECORDS_FILE = (
     Path(__file__).resolve().parents[1] / "database" / "data" / "car_records.json"
 )

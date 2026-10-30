@@ -29,7 +29,9 @@ class CarModel(models.Model):
         CarMake, on_delete=models.CASCADE, related_name="models"
     )
     name = models.CharField(max_length=100)
-    type = models.CharField(max_length=24, choices=BodyType.choices, default=BodyType.OTHER)
+    type = models.CharField(
+        max_length=24, choices=BodyType.choices, default=BodyType.OTHER
+    )
     year = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(2015), MaxValueValidator(2023)]
     )

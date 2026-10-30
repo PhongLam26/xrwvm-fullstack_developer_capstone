@@ -2,11 +2,10 @@ import os
 from urllib.parse import quote
 
 import requests
-from dotenv import load_dotenv
 
-
-
-BACKEND_URL = os.getenv("BACKEND_URL", os.getenv("backend_url", "http://127.0.0.1:3030")).rstrip("/")
+BACKEND_URL = os.getenv(
+    "BACKEND_URL", os.getenv("backend_url", "http://127.0.0.1:3030")
+).rstrip("/")
 SENTIMENT_ANALYZER_URL = os.getenv(
     "SENTIMENT_ANALYZER_URL",
     os.getenv("sentiment_analyzer_url", "http://127.0.0.1:5050"),

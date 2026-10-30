@@ -58,21 +58,21 @@ const Register = () => {
           )}
           <form onSubmit={submit}>
             <label htmlFor="register-username">Username</label>
-            <input id="register-username" name="username" autoComplete="username" required maxLength="150" value={form.username} onChange={update} />
+            <input id="register-username" name="username" placeholder="Username" autoComplete="username" required maxLength="150" value={form.username} onChange={update} />
             <div className="form-grid">
               <div>
                 <label htmlFor="first-name">First Name</label>
-                <input id="first-name" name="first_name" autoComplete="given-name" required value={form.first_name} onChange={update} />
+                <input id="first-name" name="first_name" placeholder="First Name" autoComplete="given-name" required value={form.first_name} onChange={update} />
               </div>
               <div>
                 <label htmlFor="last-name">Last Name</label>
-                <input id="last-name" name="last_name" autoComplete="family-name" required value={form.last_name} onChange={update} />
+                <input id="last-name" name="last_name" placeholder="Last Name" autoComplete="family-name" required value={form.last_name} onChange={update} />
               </div>
             </div>
             <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" autoComplete="email" required value={form.email} onChange={update} />
+            <input id="email" name="email" placeholder="email" type="email" autoComplete="email" required value={form.email} onChange={update} />
             <label htmlFor="register-password">Password</label>
-            <input id="register-password" name="password" type="password" autoComplete="new-password" minLength="8" required value={form.password} onChange={update} />
+            <input id="register-password" name="password" placeholder="Password" type="password" autoComplete="new-password" minLength="8" required value={form.password} onChange={update} />
             <button className="button button-primary button-wide" disabled={busy} type="submit">
               {busy ? "Creating account…" : "Register"}
             </button>

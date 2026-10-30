@@ -9,33 +9,85 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='CarMake',
+            name="CarMake",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=80, unique=True)),
-                ('description', models.TextField(blank=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=80, unique=True)),
+                ("description", models.TextField(blank=True)),
             ],
             options={
-                'ordering': ('name',),
+                "ordering": ("name",),
             },
         ),
         migrations.CreateModel(
-            name='CarModel',
+            name="CarModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=100)),
-                ('type', models.CharField(choices=[('Sedan', 'Sedan'), ('SUV', 'SUV'), ('Hatchback', 'Hatchback'), ('Coupe', 'Coupe'), ('Convertible', 'Convertible'), ('Pickup', 'Pickup'), ('Minivan', 'Minivan'), ('Wagon', 'Wagon'), ('Other', 'Other')], default='Other', max_length=24)),
-                ('year', models.PositiveSmallIntegerField(validators=[django.core.validators.MinValueValidator(2015), django.core.validators.MaxValueValidator(2023)])),
-                ('car_make', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='models', to='djangoapp.carmake')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=100)),
+                (
+                    "type",
+                    models.CharField(
+                        choices=[
+                            ("Sedan", "Sedan"),
+                            ("SUV", "SUV"),
+                            ("Hatchback", "Hatchback"),
+                            ("Coupe", "Coupe"),
+                            ("Convertible", "Convertible"),
+                            ("Pickup", "Pickup"),
+                            ("Minivan", "Minivan"),
+                            ("Wagon", "Wagon"),
+                            ("Other", "Other"),
+                        ],
+                        default="Other",
+                        max_length=24,
+                    ),
+                ),
+                (
+                    "year",
+                    models.PositiveSmallIntegerField(
+                        validators=[
+                            django.core.validators.MinValueValidator(2015),
+                            django.core.validators.MaxValueValidator(2023),
+                        ]
+                    ),
+                ),
+                (
+                    "car_make",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="models",
+                        to="djangoapp.carmake",
+                    ),
+                ),
             ],
             options={
-                'ordering': ('car_make__name', 'name', 'year'),
-                'constraints': [models.UniqueConstraint(fields=('car_make', 'name', 'year'), name='unique_make_model_year')],
+                "ordering": ("car_make__name", "name", "year"),
+                "constraints": [
+                    models.UniqueConstraint(
+                        fields=("car_make", "name", "year"),
+                        name="unique_make_model_year",
+                    )
+                ],
             },
         ),
     ]

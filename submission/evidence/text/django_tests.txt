@@ -1,6 +1,6 @@
 Creating test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...
 
-Found 9 test(s).
+Found 10 test(s).
 Operations to perform:
   Synchronize unmigrated apps: messages, staticfiles
   Apply all migrations: admin, auth, contenttypes, djangoapp, sessions
@@ -26,9 +26,12 @@ Running migrations:
   Applying auth.0011_update_proxy_permissions... OK
   Applying auth.0012_alter_user_first_name_max_length... OK
   Applying djangoapp.0001_initial... OK
-test_admin_username_and_logout_protection (djangoapp.tests.AuthenticationTests.test_admin_username_and_logout_protection) ... ok
+test_admin_username_and_logout_protection (djangoapp.tests.AuthenticationTests.test_admin_username_and_logout_protection) ... C:\Users\phong\Downloads\crs\cars-dealership-capstone\.venv\Lib\site-packages\django\core\handlers\base.py:61: UserWarning: No directory at: C:\Users\phong\Downloads\crs\cars-dealership-capstone\server\staticfiles\
+  mw_instance = middleware(adapted_handler)
+ok
 test_authenticated_review_uses_session_name (djangoapp.tests.AuthenticationTests.test_authenticated_review_uses_session_name) ... ok
 test_catalog_seed_idempotent (djangoapp.tests.AuthenticationTests.test_catalog_seed_idempotent) ... ok
+test_course_get_logout_requires_csrf_and_revokes_session (djangoapp.tests.AuthenticationTests.test_course_get_logout_requires_csrf_and_revokes_session) ... ok
 test_csrf_enforced (djangoapp.tests.AuthenticationTests.test_csrf_enforced) ... ok
 test_dealer_proxy_and_state (djangoapp.tests.AuthenticationTests.test_dealer_proxy_and_state) ... ok
 test_login_failure_logout_and_revoked_session (djangoapp.tests.AuthenticationTests.test_login_failure_logout_and_revoked_session) ... ok
@@ -38,7 +41,7 @@ test_unavailable_backend_returns_502 (djangoapp.tests.AuthenticationTests.test_u
 ok
 
 ----------------------------------------------------------------------
-Ran 9 tests in 3.666s
+Ran 10 tests in 7.366s
 
 OK
 Destroying test database for alias 'default' ('file:memorydb_default?mode=memory&cache=shared')...

@@ -32,7 +32,11 @@ def analyze_sentiment(input_text):
         return jsonify({"error": "Text is required."}), 400
     scores = sia.polarity_scores(input_text)
     compound = scores["compound"]
-    sentiment = "positive" if compound >= 0.05 else "negative" if compound <= -0.05 else "neutral"
+    sentiment = (
+        "positive"
+        if compound >= 0.05
+        else "negative" if compound <= -0.05 else "neutral"
+    )
     return jsonify({"sentiment": sentiment, "scores": scores})
 
 

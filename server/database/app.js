@@ -150,6 +150,8 @@ app.post("/insert_review", async (req, res, next) => {
   }
 });
 
+// Express identifies error middleware by its four parameters.
+/* jshint unused: false */
 app.use((error, _req, res, _next) => {
   console.error(error);
   res.status(500).json({ error: "The dealership service could not complete the request." });
