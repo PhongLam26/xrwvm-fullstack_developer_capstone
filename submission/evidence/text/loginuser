@@ -1,0 +1,2 @@
+$ curl.exe -b $cookieJar -c $cookieJar -H "X-CSRFToken: $csrf" -H "Content-Type: application/json" --data-binary "@$privateLoginFile" http://127.0.0.1:8010/djangoapp/login
+{"status": "Authenticated", "userName": "capstone_reviewer", "firstName": "Demo", "lastName": "Driver"}

@@ -1,0 +1,25 @@
+name: Capstone CI
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r server/requirements.txt
+      - run: python manage.py check
+        working-directory: server
+      - run: python manage.py test
+        working-directory: server
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm ci
+        working-directory: server/frontend
+      - run: npm run build
+        working-directory: server/frontend
+      - run: npm ci && npm test
+        working-directory: server/database
+      - run: docker compose build

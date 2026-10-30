@@ -1,0 +1,16 @@
+{
+  "reviews": [
+    {
+      "id": 51,
+      "name": "Capstone Demo Reviewer",
+      "dealership": 8,
+      "review": "Friendly team and a smooth, helpful buying experience.",
+      "purchase": true,
+      "purchase_date": "2024-06-15",
+      "car_make": "Toyota",
+      "car_model": "Camry",
+      "car_year": 2022,
+      "sentiment": "positive"
+    }
+  ]
+}

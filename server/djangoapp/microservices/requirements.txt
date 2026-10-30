@@ -1,2 +1,2 @@
-Flask
-nltk
+Flask>=3.0,<4
+nltk>=3.8,<4

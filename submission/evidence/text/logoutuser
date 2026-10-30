@@ -1,0 +1,2 @@
+$ curl.exe -X POST -b $cookieJar -H "X-CSRFToken: $csrf" http://127.0.0.1:8010/djangoapp/logout
+{"status": 200, "message": "Logged out."}

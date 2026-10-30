@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+node_modules/
+.env*
+!.env.example
+.local-secrets.json
+submission/evidence/private/
