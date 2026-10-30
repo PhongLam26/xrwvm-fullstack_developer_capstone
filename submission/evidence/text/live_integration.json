@@ -1,0 +1,126 @@
+{
+  "command": "Live HTTP integration against Django, Express/MongoDB and Flask on 2026-10-30",
+  "checks": [
+    {
+      "name": "page /",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "page /about",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "page /contact",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "page /register",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "page /login",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "page /dealer/8",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "page /postreview/8",
+      "passed": true,
+      "detail": 200
+    },
+    {
+      "name": "all dealers",
+      "passed": true,
+      "detail": 50
+    },
+    {
+      "name": "Kansas filter",
+      "passed": true,
+      "detail": 1
+    },
+    {
+      "name": "missing dealer",
+      "passed": true,
+      "detail": 404
+    },
+    {
+      "name": "nonempty catalog",
+      "passed": true,
+      "detail": {
+        "makes": 5,
+        "models": 110
+      }
+    },
+    {
+      "name": "live sentiment",
+      "passed": true,
+      "detail": {
+        "scores": {
+          "compound": 0.5574,
+          "neg": 0.0,
+          "neu": 0.217,
+          "pos": 0.783
+        },
+        "sentiment": "positive"
+      }
+    },
+    {
+      "name": "browser review persisted",
+      "passed": true,
+      "detail": {
+        "status": 200,
+        "reviews": [
+          {
+            "_id": "6ae4ad0b52a1f6200cf50cc3",
+            "id": 51,
+            "name": "Capstone Demo Reviewer",
+            "dealership": 8,
+            "review": "Friendly team and a smooth, helpful buying experience.",
+            "purchase": true,
+            "purchase_date": "2024-06-15",
+            "car_make": "Toyota",
+            "car_model": "Camry",
+            "car_year": 2022,
+            "sentiment": "positive",
+            "__v": 0
+          },
+          {
+            "_id": "6ae4b15d52a1f6200cf50cd8",
+            "id": 52,
+            "name": "Demo Driver",
+            "dealership": 8,
+            "review": "Fantastic services. The Kansas team explained every option clearly and made my Toyota purchase easy. Capstone verified review 2026-10-30.",
+            "purchase": true,
+            "purchase_date": "2026-10-30",
+            "car_make": "Toyota",
+            "car_model": "4Runner",
+            "car_year": 2020,
+            "sentiment": "positive",
+            "__v": 0
+          }
+        ]
+      }
+    },
+    {
+      "name": "anonymous review rejected",
+      "passed": true,
+      "detail": 401
+    },
+    {
+      "name": "admin requires login",
+      "passed": true,
+      "detail": {
+        "status": 302,
+        "location": "/admin/login/?next=/admin/"
+      }
+    }
+  ]
+}

@@ -122,14 +122,15 @@ C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screen
 ## Q22
 
 
-```text
-Command: gh run view 41074907036 --repo PhongLam26/xrwvm-fullstack_developer_capstone
 
-✓ main Capstone CI · 41074907036
-Triggered via push about 17 minutes ago
+```text
+Command: gh run view 41077796961 --repo PhongLam26/xrwvm-fullstack_developer_capstone
+
+✓ main Capstone CI · 41077796961
+Triggered via push about 1 minute ago
 
 JOBS
-✓ checks in 3m15s (ID 124128379499)
+✓ checks in 49s (ID 124138528760)
 
 ANNOTATIONS
 ! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
@@ -139,11 +140,30 @@ checks: .github#2
 checks: .github#1
 
 
-For more information about the job, try: gh run view --job=124128379499
-View this run on GitHub: https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/actions/runs/41074907036
+For more information about the job, try: gh run view --job=124138528760
+View this run on GitHub: https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/actions/runs/41077796961
+
+Command: gh run view 41077796961 --repo PhongLam26/xrwvm-fullstack_developer_capstone --json jobs --jq .jobs[].steps[]
+1. Set up job: completed/success
+2. Run actions/checkout@v4: completed/success
+3. Run actions/setup-python@v5: completed/success
+4. Run pip install -r server/requirements.txt: completed/success
+5. Run python manage.py check: completed/success
+6. Run python manage.py test: completed/success
+7. Run actions/setup-node@v4: completed/success
+8. Run npm ci: completed/success
+9. Run npm run build: completed/success
+10. Run npm ci && npm test: completed/success
+11. Run docker compose build: completed/success
+20. Post Run actions/setup-node@v4: completed/success
+21. Post Run actions/setup-python@v5: completed/success
+22. Post Run actions/checkout@v4: completed/success
+23. Complete job: completed/success
 ```
 
 Full runner log: `evidence/text/CICD-full.txt`.
+
+Verified source commit: `ff1e55641e0488e6821fc91040e42f95ee6e23b6`.
 
 ## Q23
 

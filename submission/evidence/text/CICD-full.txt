@@ -1,571 +1,578 @@
-checks	Set up job	﻿2026-10-30T14:48:32.8228931Z Current runner version: '2.338.0'
-checks	Set up job	2026-10-30T14:48:32.8255604Z ##[group]Runner Image Provisioner
-checks	Set up job	2026-10-30T14:48:32.8256521Z Hosted Compute Agent
-checks	Set up job	2026-10-30T14:48:32.8257275Z Version: 20261021.618
-checks	Set up job	2026-10-30T14:48:32.8258014Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
-checks	Set up job	2026-10-30T14:48:32.8258824Z Build Date: 2026-10-21T00:45:21Z
-checks	Set up job	2026-10-30T14:48:32.8259588Z Worker ID: {fc04882f-ac7d-4f04-83b6-5c9ccc68648d}
-checks	Set up job	2026-10-30T14:48:32.8260482Z Region: westus
-checks	Set up job	2026-10-30T14:48:32.8261127Z Cloud: Azure
-checks	Set up job	2026-10-30T14:48:32.8261811Z ##[endgroup]
-checks	Set up job	2026-10-30T14:48:32.8263240Z ##[group]Operating System
-checks	Set up job	2026-10-30T14:48:32.8264285Z Ubuntu
-checks	Set up job	2026-10-30T14:48:32.8264874Z 24.04.5
-checks	Set up job	2026-10-30T14:48:32.8265498Z LTS
-checks	Set up job	2026-10-30T14:48:32.8266114Z ##[endgroup]
-checks	Set up job	2026-10-30T14:48:32.8266700Z ##[group]Runner Image
-checks	Set up job	2026-10-30T14:48:32.8267447Z Image: ubuntu-24.04
-checks	Set up job	2026-10-30T14:48:32.8268073Z Version: 20261025.353.1
-checks	Set up job	2026-10-30T14:48:32.8269224Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
-checks	Set up job	2026-10-30T14:48:32.8271441Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
-checks	Set up job	2026-10-30T14:48:32.8272538Z ##[endgroup]
-checks	Set up job	2026-10-30T14:48:32.8274033Z ##[group]GITHUB_TOKEN Permissions
-checks	Set up job	2026-10-30T14:48:32.8276442Z Contents: read
-checks	Set up job	2026-10-30T14:48:32.8277176Z Metadata: read
-checks	Set up job	2026-10-30T14:48:32.8277876Z Packages: read
-checks	Set up job	2026-10-30T14:48:32.8278489Z ##[endgroup]
-checks	Set up job	2026-10-30T14:48:32.8280552Z Secret source: Actions
-checks	Set up job	2026-10-30T14:48:32.8281660Z Cache mode: write
-checks	Set up job	2026-10-30T14:48:32.8282429Z Prepare workflow directory
-checks	Set up job	2026-10-30T14:48:32.8618396Z Prepare all required actions
-checks	Set up job	2026-10-30T14:48:32.8669143Z Getting action download info
-checks	Set up job	2026-10-30T14:48:33.2715622Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
-checks	Set up job	2026-10-30T14:48:33.3672854Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
-checks	Set up job	2026-10-30T14:48:33.4446311Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
-checks	Set up job	2026-10-30T14:48:33.6446373Z Complete job name: checks
-checks	Run actions/checkout@v4	﻿2026-10-30T14:48:33.7309580Z ##[group]Run actions/checkout@v4
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7310506Z with:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7311075Z   repository: PhongLam26/xrwvm-fullstack_developer_capstone
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7315418Z   token: ***
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7315860Z   ssh-strict: true
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7316309Z   ssh-user: git
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7316757Z   persist-credentials: true
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7317251Z   clean: true
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7317697Z   sparse-checkout-cone-mode: true
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7318218Z   fetch-depth: 1
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7318655Z   fetch-tags: false
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7319099Z   show-progress: true
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7319557Z   lfs: false
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7319973Z   submodules: false
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7320418Z   set-safe-directory: true
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7320920Z   allow-unsafe-pr-checkout: false
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.7321673Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9619412Z Syncing repository: PhongLam26/xrwvm-fullstack_developer_capstone
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9621382Z ##[group]Getting Git version info
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9622448Z Working directory is '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9623999Z [command]/usr/bin/git version
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9696738Z git version 2.56.0
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9718319Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9734508Z Temporarily overriding HOME='/home/runner/work/_temp/700bd4bd-573b-4400-8517-cf5aff2885e8' before making global git config changes
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9736769Z Adding repository directory to the temporary git global config as a safe directory
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9740208Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9807541Z Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9824264Z ##[group]Initializing the repository
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9837468Z [command]/usr/bin/git init /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9923689Z hint: Using 'master' as the name for the initial branch. This default branch name
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9925161Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9926406Z hint: to use in all of your new repositories, which will suppress this warning,
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9927872Z hint: call:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9928519Z hint:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9929140Z hint: 	git config --global init.defaultBranch <name>
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9929780Z hint:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9930376Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9931324Z hint: 'development'. The just-created branch can be renamed via this command:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9932289Z hint:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9932931Z hint: 	git branch -m <name>
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9933710Z hint:
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9934871Z hint: Disable this message with "git config set advice.defaultBranchName false"
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9937030Z Initialized empty Git repository in /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/.git/
-checks	Run actions/checkout@v4	2026-10-30T14:48:33.9947673Z [command]/usr/bin/git remote add origin https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0004767Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0005989Z ##[group]Disabling automatic garbage collection
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0007073Z [command]/usr/bin/git config --local gc.auto 0
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0044624Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0045779Z ##[group]Setting up auth
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0051588Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0092550Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0462583Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0511120Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0784297Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.0831516Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.1093909Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.1145203Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.1146033Z ##[group]Fetching the repository
-checks	Run actions/checkout@v4	2026-10-30T14:48:34.1157187Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +7f9ee93c07648cc40239511466a2850e2939825c:refs/remotes/origin/main
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.4944116Z From https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.4945698Z  * [new ref]         7f9ee93c07648cc40239511466a2850e2939825c -> origin/main
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.4948421Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.4949463Z ##[group]Determining the checkout info
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.4954828Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.4958718Z [command]/usr/bin/git sparse-checkout disable
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5021260Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5063464Z ##[group]Checking out the ref
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5078409Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5294877Z Switched to a new branch 'main'
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5300902Z branch 'main' set up to track 'origin/main'.
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5308653Z ##[endgroup]
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5361530Z [command]/usr/bin/git log -1 --format=%H
-checks	Run actions/checkout@v4	2026-10-30T14:50:49.5396955Z 7f9ee93c07648cc40239511466a2850e2939825c
-checks	Run actions/setup-python@v5	﻿2026-10-30T14:50:49.5780754Z ##[group]Run actions/setup-python@v5
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5781251Z with:
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5781519Z   python-version: 3.11
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5781821Z   check-latest: false
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5784621Z   token: ***
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5784908Z   update-environment: true
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5785222Z   allow-prereleases: false
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5785511Z   freethreaded: false
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.5785786Z ##[endgroup]
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.7270597Z ##[group]Installed versions
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.7369696Z (node:2349) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.7370495Z (Use `node --trace-deprecation ...` to show where the warning was created)
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.7371150Z Successfully set up CPython (3.11.17)
-checks	Run actions/setup-python@v5	2026-10-30T14:50:49.7371931Z ##[endgroup]
-checks	Run pip install -r server/requirements.txt	﻿2026-10-30T14:50:49.7506624Z ##[group]Run pip install -r server/requirements.txt
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7507231Z ^[[36;1mpip install -r server/requirements.txt^[[0m
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7542669Z shell: /usr/bin/bash -e {0}
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7542996Z env:
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7543296Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7544025Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7544503Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7544900Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7545283Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7545671Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:49.7546000Z ##[endgroup]
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.5659245Z Collecting Django<5.3,>=5.2 (from -r server/requirements.txt (line 1))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.6107681Z   Downloading django-5.2.18-py3-none-any.whl.metadata (4.1 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.6321887Z Collecting requests<3,>=2.32 (from -r server/requirements.txt (line 2))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.6352017Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.7862870Z Collecting Pillow>=10 (from -r server/requirements.txt (line 3))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.7894829Z   Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8049707Z Collecting gunicorn>=23 (from -r server/requirements.txt (line 4))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8079519Z   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8216058Z Collecting python-dotenv>=1 (from -r server/requirements.txt (line 5))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8246445Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8406794Z Collecting asgiref>=3.8.1 (from Django<5.3,>=5.2->-r server/requirements.txt (line 1))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8435069Z   Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8548062Z Collecting sqlparse>=0.3.1 (from Django<5.3,>=5.2->-r server/requirements.txt (line 1))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.8578094Z   Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.9632493Z Collecting charset_normalizer<4,>=2 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.9670744Z   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.9815777Z Collecting idna<4,>=2.5 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:50.9842982Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0014320Z Collecting urllib3<3,>=1.26 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0041695Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0186381Z Collecting certifi>=2023.5.7 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0214863Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0294286Z Downloading django-5.2.18-py3-none-any.whl (8.3 MB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0601766Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 292.9 MB/s  0:00:00
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0641807Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0692217Z Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0745702Z Downloading idna-3.20-py3-none-any.whl (69 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0793345Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.0846477Z Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.1068229Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 350.6 MB/s  0:00:00
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.1099377Z Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.1151113Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.1195699Z Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.1244948Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.1297504Z Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:51.2637223Z Installing collected packages: urllib3, sqlparse, python-dotenv, Pillow, idna, gunicorn, charset_normalizer, certifi, asgiref, requests, Django
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:53.5556501Z 
-checks	Run pip install -r server/requirements.txt	2026-10-30T14:50:53.5568591Z Successfully installed Django-5.2.18 Pillow-13.0.0 asgiref-3.13.0 certifi-2026.10.23 charset_normalizer-3.5.2 gunicorn-26.2.0 idna-3.20 python-dotenv-1.2.4 requests-2.34.2 sqlparse-0.6.0 urllib3-2.8.0
-checks	Run python manage.py check	﻿2026-10-30T14:50:53.6243614Z ##[group]Run python manage.py check
-checks	Run python manage.py check	2026-10-30T14:50:53.6244391Z ^[[36;1mpython manage.py check^[[0m
-checks	Run python manage.py check	2026-10-30T14:50:53.6268045Z shell: /usr/bin/bash -e {0}
-checks	Run python manage.py check	2026-10-30T14:50:53.6268321Z env:
-checks	Run python manage.py check	2026-10-30T14:50:53.6268602Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py check	2026-10-30T14:50:53.6269058Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run python manage.py check	2026-10-30T14:50:53.6269530Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py check	2026-10-30T14:50:53.6269931Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py check	2026-10-30T14:50:53.6270307Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py check	2026-10-30T14:50:53.6270685Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run python manage.py check	2026-10-30T14:50:53.6271018Z ##[endgroup]
-checks	Run python manage.py check	2026-10-30T14:50:54.0993094Z System check identified no issues (0 silenced).
-checks	Run python manage.py test	﻿2026-10-30T14:50:54.1585489Z ##[group]Run python manage.py test
-checks	Run python manage.py test	2026-10-30T14:50:54.1585837Z ^[[36;1mpython manage.py test^[[0m
-checks	Run python manage.py test	2026-10-30T14:50:54.1608490Z shell: /usr/bin/bash -e {0}
-checks	Run python manage.py test	2026-10-30T14:50:54.1608755Z env:
-checks	Run python manage.py test	2026-10-30T14:50:54.1609031Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py test	2026-10-30T14:50:54.1609485Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run python manage.py test	2026-10-30T14:50:54.1609915Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py test	2026-10-30T14:50:54.1610328Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py test	2026-10-30T14:50:54.1610704Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run python manage.py test	2026-10-30T14:50:54.1611091Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run python manage.py test	2026-10-30T14:50:54.1611424Z ##[endgroup]
-checks	Run python manage.py test	2026-10-30T14:50:54.5890885Z Creating test database for alias 'default'...
-checks	Run python manage.py test	2026-10-30T14:50:56.7764944Z ......
-checks	Run python manage.py test	2026-10-30T14:50:56.7765536Z ----------------------------------------------------------------------
-checks	Run python manage.py test	2026-10-30T14:50:56.7766236Z Ran 6 tests in 2.016s
-checks	Run python manage.py test	2026-10-30T14:50:56.7766560Z 
-checks	Run python manage.py test	2026-10-30T14:50:56.7766687Z OK
-checks	Run python manage.py test	2026-10-30T14:50:56.7767014Z Destroying test database for alias 'default'...
-checks	Run python manage.py test	2026-10-30T14:50:56.7769735Z Found 6 test(s).
-checks	Run python manage.py test	2026-10-30T14:50:56.7770293Z System check identified no issues (0 silenced).
-checks	Run actions/setup-node@v4	﻿2026-10-30T14:50:56.8584191Z ##[group]Run actions/setup-node@v4
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8584510Z with:
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8584718Z   node-version: 20
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8584941Z   always-auth: false
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8585387Z   check-latest: false
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8587903Z   token: ***
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8588109Z env:
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8588392Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8588832Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8589274Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8589668Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8590044Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8590442Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run actions/setup-node@v4	2026-10-30T14:50:56.8590774Z ##[endgroup]
-checks	Run actions/setup-node@v4	2026-10-30T14:50:57.0053507Z Attempting to download 20...
-checks	Run actions/setup-node@v4	2026-10-30T14:50:57.0197621Z (node:2388) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-checks	Run actions/setup-node@v4	2026-10-30T14:50:57.0199033Z (Use `node --trace-deprecation ...` to show where the warning was created)
-checks	Run actions/setup-node@v4	2026-10-30T14:50:57.9495201Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
-checks	Run actions/setup-node@v4	2026-10-30T14:50:58.4106174Z Extracting ...
-checks	Run actions/setup-node@v4	2026-10-30T14:50:58.4242185Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/03526cd2-ac48-49fb-88b2-bb432a3039d9 -f /home/runner/work/_temp/83afc4a2-625f-45f9-967d-12cc76ae8164
-checks	Run actions/setup-node@v4	2026-10-30T14:50:59.5117068Z Adding to the cache ...
-checks	Run actions/setup-node@v4	2026-10-30T14:51:00.9088223Z ##[group]Environment details
-checks	Run actions/setup-node@v4	2026-10-30T14:51:01.1487650Z node: v20.20.2
-checks	Run actions/setup-node@v4	2026-10-30T14:51:01.1488069Z npm: 10.8.2
-checks	Run actions/setup-node@v4	2026-10-30T14:51:01.1488285Z yarn: 1.22.22
-checks	Run actions/setup-node@v4	2026-10-30T14:51:01.1488895Z ##[endgroup]
-checks	Run npm ci	﻿2026-10-30T14:51:01.1676468Z ##[group]Run npm ci
-checks	Run npm ci	2026-10-30T14:51:01.1676757Z ^[[36;1mnpm ci^[[0m
-checks	Run npm ci	2026-10-30T14:51:01.1700279Z shell: /usr/bin/bash -e {0}
-checks	Run npm ci	2026-10-30T14:51:01.1700548Z env:
-checks	Run npm ci	2026-10-30T14:51:01.1700826Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci	2026-10-30T14:51:01.1701299Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run npm ci	2026-10-30T14:51:01.1701744Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci	2026-10-30T14:51:01.1702139Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci	2026-10-30T14:51:01.1702537Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci	2026-10-30T14:51:01.1702914Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run npm ci	2026-10-30T14:51:01.1703238Z ##[endgroup]
-checks	Run npm ci	2026-10-30T14:51:04.9336805Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-checks	Run npm ci	2026-10-30T14:51:05.2306439Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
-checks	Run npm ci	2026-10-30T14:51:05.2908960Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
-checks	Run npm ci	2026-10-30T14:51:05.4040467Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
-checks	Run npm ci	2026-10-30T14:51:05.8791687Z npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
-checks	Run npm ci	2026-10-30T14:51:08.1514100Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
-checks	Run npm ci	2026-10-30T14:51:08.9540670Z npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
-checks	Run npm ci	2026-10-30T14:51:08.9805026Z npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
-checks	Run npm ci	2026-10-30T14:51:08.9808233Z npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
-checks	Run npm ci	2026-10-30T14:51:08.9811583Z npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
-checks	Run npm ci	2026-10-30T14:51:08.9814763Z npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
-checks	Run npm ci	2026-10-30T14:51:08.9817898Z npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
-checks	Run npm ci	2026-10-30T14:51:19.9146623Z 
-checks	Run npm ci	2026-10-30T14:51:19.9147620Z added 1534 packages, and audited 1535 packages in 19s
-checks	Run npm ci	2026-10-30T14:51:19.9148100Z 
-checks	Run npm ci	2026-10-30T14:51:19.9148378Z 246 packages are looking for funding
-checks	Run npm ci	2026-10-30T14:51:19.9148867Z   run `npm fund` for details
-checks	Run npm ci	2026-10-30T14:51:20.0188657Z 
-checks	Run npm ci	2026-10-30T14:51:20.0189762Z 80 vulnerabilities (21 low, 20 moderate, 35 high, 4 critical)
-checks	Run npm ci	2026-10-30T14:51:20.0190261Z 
-checks	Run npm ci	2026-10-30T14:51:20.0190635Z To address issues that do not require attention, run:
-checks	Run npm ci	2026-10-30T14:51:20.0191162Z   npm audit fix
-checks	Run npm ci	2026-10-30T14:51:20.0191370Z 
-checks	Run npm ci	2026-10-30T14:51:20.0191737Z To address all issues (including breaking changes), run:
-checks	Run npm ci	2026-10-30T14:51:20.0192315Z   npm audit fix --force
-checks	Run npm ci	2026-10-30T14:51:20.0192539Z 
-checks	Run npm ci	2026-10-30T14:51:20.0193510Z Run `npm audit` for details.
-checks	Run npm run build	﻿2026-10-30T14:51:20.0676485Z ##[group]Run npm run build
-checks	Run npm run build	2026-10-30T14:51:20.0676800Z ^[[36;1mnpm run build^[[0m
-checks	Run npm run build	2026-10-30T14:51:20.0699514Z shell: /usr/bin/bash -e {0}
-checks	Run npm run build	2026-10-30T14:51:20.0699779Z env:
-checks	Run npm run build	2026-10-30T14:51:20.0700079Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm run build	2026-10-30T14:51:20.0700525Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run npm run build	2026-10-30T14:51:20.0700968Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm run build	2026-10-30T14:51:20.0701357Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm run build	2026-10-30T14:51:20.0701739Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm run build	2026-10-30T14:51:20.0702118Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run npm run build	2026-10-30T14:51:20.0702451Z ##[endgroup]
-checks	Run npm run build	2026-10-30T14:51:20.1829019Z 
-checks	Run npm run build	2026-10-30T14:51:20.1829738Z > usermgmt@0.1.0 build
-checks	Run npm run build	2026-10-30T14:51:20.1830111Z > react-scripts build
-checks	Run npm run build	2026-10-30T14:51:20.1830282Z 
-checks	Run npm run build	2026-10-30T14:51:21.2363058Z Creating an optimized production build...
-checks	Run npm run build	2026-10-30T14:51:21.3400521Z Browserslist: caniuse-lite is outdated. Please run:
-checks	Run npm run build	2026-10-30T14:51:21.3401457Z   npx update-browserslist-db@latest
-checks	Run npm run build	2026-10-30T14:51:21.3402448Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-checks	Run npm run build	2026-10-30T14:51:27.0062044Z Browserslist: caniuse-lite is outdated. Please run:
-checks	Run npm run build	2026-10-30T14:51:27.0062943Z   npx update-browserslist-db@latest
-checks	Run npm run build	2026-10-30T14:51:27.0064144Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
-checks	Run npm run build	2026-10-30T14:51:27.4414874Z Compiled successfully.
-checks	Run npm run build	2026-10-30T14:51:27.4415248Z 
-checks	Run npm run build	2026-10-30T14:51:27.4415466Z File sizes after gzip:
-checks	Run npm run build	2026-10-30T14:51:27.4415715Z 
-checks	Run npm run build	2026-10-30T14:51:27.4517359Z   55.6 kB  build/static/js/main.06d3654d.js
-checks	Run npm run build	2026-10-30T14:51:27.4518016Z   1.03 kB  build/static/css/main.12698a91.css
-checks	Run npm run build	2026-10-30T14:51:27.4518362Z 
-checks	Run npm run build	2026-10-30T14:51:27.4519401Z The project was built assuming it is hosted at /.
-checks	Run npm run build	2026-10-30T14:51:27.4520188Z You can control this with the homepage field in your package.json.
-checks	Run npm run build	2026-10-30T14:51:27.4520674Z 
-checks	Run npm run build	2026-10-30T14:51:27.4520937Z The build folder is ready to be deployed.
-checks	Run npm run build	2026-10-30T14:51:27.4521641Z You may serve it with a static server:
-checks	Run npm run build	2026-10-30T14:51:27.4521852Z 
-checks	Run npm run build	2026-10-30T14:51:27.4523009Z   npm install -g serve
-checks	Run npm run build	2026-10-30T14:51:27.4523449Z   serve -s build
-checks	Run npm run build	2026-10-30T14:51:27.4523951Z 
-checks	Run npm run build	2026-10-30T14:51:27.4524773Z Find out more about deployment here:
-checks	Run npm run build	2026-10-30T14:51:27.4525076Z 
-checks	Run npm run build	2026-10-30T14:51:27.4525870Z   https://cra.link/deployment
-checks	Run npm run build	2026-10-30T14:51:27.4526157Z 
-checks	Run npm ci && npm test	﻿2026-10-30T14:51:27.5090148Z ##[group]Run npm ci && npm test
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5090686Z ^[[36;1mnpm ci && npm test^[[0m
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5122163Z shell: /usr/bin/bash -e {0}
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5122579Z env:
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5123011Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5123967Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5124696Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5125330Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5125957Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5126580Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run npm ci && npm test	2026-10-30T14:51:27.5127140Z ##[endgroup]
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6448213Z 
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6449149Z added 88 packages, and audited 89 packages in 1s
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6449611Z 
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6449890Z 19 packages are looking for funding
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6450376Z   run `npm fund` for details
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6458204Z 
-checks	Run npm ci && npm test	2026-10-30T14:51:28.6458557Z found 0 vulnerabilities
-checks	Run npm ci && npm test	2026-10-30T14:51:28.7666739Z 
-checks	Run npm ci && npm test	2026-10-30T14:51:28.7667603Z > cars-dealership-api@1.0.0 test
-checks	Run npm ci && npm test	2026-10-30T14:51:28.7668139Z > node --check app.js
-checks	Run npm ci && npm test	2026-10-30T14:51:28.7668302Z 
-checks	Run docker compose build	﻿2026-10-30T14:51:28.8052829Z ##[group]Run docker compose build
-checks	Run docker compose build	2026-10-30T14:51:28.8053171Z ^[[36;1mdocker compose build^[[0m
-checks	Run docker compose build	2026-10-30T14:51:28.8076698Z shell: /usr/bin/bash -e {0}
-checks	Run docker compose build	2026-10-30T14:51:28.8076977Z env:
-checks	Run docker compose build	2026-10-30T14:51:28.8077261Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run docker compose build	2026-10-30T14:51:28.8077727Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
-checks	Run docker compose build	2026-10-30T14:51:28.8078186Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run docker compose build	2026-10-30T14:51:28.8078588Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run docker compose build	2026-10-30T14:51:28.8078969Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
-checks	Run docker compose build	2026-10-30T14:51:28.8079358Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
-checks	Run docker compose build	2026-10-30T14:51:28.8079693Z ##[endgroup]
-checks	Run docker compose build	2026-10-30T14:51:32.2001987Z #1 [internal] load local bake definitions
-checks	Run docker compose build	2026-10-30T14:51:32.3507588Z #1 reading from stdin 1.01kB done
-checks	Run docker compose build	2026-10-30T14:51:32.3508023Z #1 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:32.5619533Z 
-checks	Run docker compose build	2026-10-30T14:51:32.5620293Z #2 [api internal] load build definition from Dockerfile
-checks	Run docker compose build	2026-10-30T14:51:32.5621134Z #2 transferring dockerfile: 172B 0.0s done
-checks	Run docker compose build	2026-10-30T14:51:32.5621848Z #2 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:32.5622525Z 
-checks	Run docker compose build	2026-10-30T14:51:32.5623456Z #3 [sentiment internal] load build definition from Dockerfile
-checks	Run docker compose build	2026-10-30T14:51:32.5625002Z #3 transferring dockerfile: 260B 0.0s done
-checks	Run docker compose build	2026-10-30T14:51:32.5625675Z #3 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:32.5625881Z 
-checks	Run docker compose build	2026-10-30T14:51:32.5626507Z #4 [api internal] load metadata for docker.io/library/node:20-slim
-checks	Run docker compose build	2026-10-30T14:51:32.8021677Z #4 ...
-checks	Run docker compose build	2026-10-30T14:51:32.8021931Z 
-checks	Run docker compose build	2026-10-30T14:51:32.8022250Z #5 [auth] library/node:pull token for registry-1.docker.io
-checks	Run docker compose build	2026-10-30T14:51:32.8022621Z #5 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:32.8022758Z 
-checks	Run docker compose build	2026-10-30T14:51:32.8023192Z #6 [auth] library/python:pull token for registry-1.docker.io
-checks	Run docker compose build	2026-10-30T14:51:32.8023602Z #6 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:32.9524386Z 
-checks	Run docker compose build	2026-10-30T14:51:32.9525516Z #7 [sentiment internal] load metadata for docker.io/library/python:3.11-slim
-checks	Run docker compose build	2026-10-30T14:51:33.3058815Z #7 DONE 0.9s
-checks	Run docker compose build	2026-10-30T14:51:33.3059541Z 
-checks	Run docker compose build	2026-10-30T14:51:33.3062878Z #4 [api internal] load metadata for docker.io/library/node:20-slim
-checks	Run docker compose build	2026-10-30T14:51:33.4514373Z #4 DONE 0.9s
-checks	Run docker compose build	2026-10-30T14:51:33.4519830Z 
-checks	Run docker compose build	2026-10-30T14:51:33.4520524Z #8 [sentiment internal] load .dockerignore
-checks	Run docker compose build	2026-10-30T14:51:33.4521490Z #8 transferring context: 2B done
-checks	Run docker compose build	2026-10-30T14:51:33.4522068Z #8 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:33.4522804Z 
-checks	Run docker compose build	2026-10-30T14:51:33.4523256Z #9 [api internal] load .dockerignore
-checks	Run docker compose build	2026-10-30T14:51:33.4524161Z #9 transferring context: 2B done
-checks	Run docker compose build	2026-10-30T14:51:33.4524818Z #9 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:33.4525210Z 
-checks	Run docker compose build	2026-10-30T14:51:33.4525748Z #10 [sentiment internal] load build context
-checks	Run docker compose build	2026-10-30T14:51:33.4526588Z #10 transferring context: 92.05kB 0.0s done
-checks	Run docker compose build	2026-10-30T14:51:33.4527258Z #10 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:33.4527670Z 
-checks	Run docker compose build	2026-10-30T14:51:33.4528726Z #11 [api 1/5] FROM docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
-checks	Run docker compose build	2026-10-30T14:51:33.4536002Z #11 resolve docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0 0.0s done
-checks	Run docker compose build	2026-10-30T14:51:33.5598301Z #11 ...
-checks	Run docker compose build	2026-10-30T14:51:33.5599347Z 
-checks	Run docker compose build	2026-10-30T14:51:33.5599904Z #12 [api internal] load build context
-checks	Run docker compose build	2026-10-30T14:51:33.5601064Z #12 transferring context: 13.70MB 0.2s done
-checks	Run docker compose build	2026-10-30T14:51:33.5601589Z #12 DONE 0.2s
-checks	Run docker compose build	2026-10-30T14:51:33.5601828Z 
-checks	Run docker compose build	2026-10-30T14:51:33.5602672Z #11 [api 1/5] FROM docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
-checks	Run docker compose build	2026-10-30T14:51:33.5604275Z #11 sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0 6.49kB / 6.49kB done
-checks	Run docker compose build	2026-10-30T14:51:33.5605577Z #11 sha256:3d0f05455dea2c82e2f76e7e2543964c30f6b7d673fc1a83286736d44fe4c41c 1.93kB / 1.93kB done
-checks	Run docker compose build	2026-10-30T14:51:33.5606842Z #11 sha256:9da6b4e352d0d5c94963eba1832408f5b7b08839cd8be9b6610c05de5118c704 6.88kB / 6.88kB done
-checks	Run docker compose build	2026-10-30T14:51:33.7637589Z #11 sha256:ff86ea2e5edce334d19a34fbc65d1a511aa1fc823dba1110422f991aa56b44d4 28.24MB / 28.24MB 0.4s done
-checks	Run docker compose build	2026-10-30T14:51:33.7639959Z #11 sha256:e54aec64c365815cd7b91e718f00ac6e625562b1de09036b38614621b42c7582 3.31kB / 3.31kB 0.4s done
-checks	Run docker compose build	2026-10-30T14:51:33.7641733Z #11 sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f 0B / 41.42MB 0.4s
-checks	Run docker compose build	2026-10-30T14:51:33.7643293Z #11 sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2 0B / 1.71MB 0.4s
-checks	Run docker compose build	2026-10-30T14:51:33.7644924Z #11 sha256:3c02fd806613748139b8b8a14a69ae3518a1b0e863c57c35aada3b92ed87fb31 0B / 447B 0.4s
-checks	Run docker compose build	2026-10-30T14:51:33.8911851Z #11 sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f 16.78MB / 41.42MB 0.5s
-checks	Run docker compose build	2026-10-30T14:51:33.8914043Z #11 sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2 1.71MB / 1.71MB 0.5s done
-checks	Run docker compose build	2026-10-30T14:51:33.8916747Z #11 sha256:3c02fd806613748139b8b8a14a69ae3518a1b0e863c57c35aada3b92ed87fb31 447B / 447B 0.5s done
-checks	Run docker compose build	2026-10-30T14:51:33.8920211Z #11 extracting sha256:ff86ea2e5edce334d19a34fbc65d1a511aa1fc823dba1110422f991aa56b44d4
-checks	Run docker compose build	2026-10-30T14:51:33.9934125Z #11 sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f 41.42MB / 41.42MB 0.6s done
-checks	Run docker compose build	2026-10-30T14:51:35.0137736Z #11 extracting sha256:ff86ea2e5edce334d19a34fbc65d1a511aa1fc823dba1110422f991aa56b44d4 1.2s done
-checks	Run docker compose build	2026-10-30T14:51:35.2012376Z #11 extracting sha256:e54aec64c365815cd7b91e718f00ac6e625562b1de09036b38614621b42c7582 done
-checks	Run docker compose build	2026-10-30T14:51:35.2013710Z #11 extracting sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f
-checks	Run docker compose build	2026-10-30T14:51:36.6873578Z #11 extracting sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f 1.3s done
-checks	Run docker compose build	2026-10-30T14:51:36.7479446Z #11 extracting sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2
-checks	Run docker compose build	2026-10-30T14:51:36.8483526Z #11 extracting sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2 0.0s done
-checks	Run docker compose build	2026-10-30T14:51:36.8485432Z #11 extracting sha256:3c02fd806613748139b8b8a14a69ae3518a1b0e863c57c35aada3b92ed87fb31 done
-checks	Run docker compose build	2026-10-30T14:51:36.8486244Z #11 DONE 3.5s
-checks	Run docker compose build	2026-10-30T14:51:36.8486439Z 
-checks	Run docker compose build	2026-10-30T14:51:36.8486834Z #13 [api 2/5] WORKDIR /app
-checks	Run docker compose build	2026-10-30T14:51:36.8487217Z #13 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:36.8487507Z 
-checks	Run docker compose build	2026-10-30T14:51:36.8487901Z #14 [api 3/5] COPY package*.json ./
-checks	Run docker compose build	2026-10-30T14:51:36.9520841Z #14 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:36.9521356Z 
-checks	Run docker compose build	2026-10-30T14:51:36.9522691Z #15 [api 4/5] RUN npm ci --omit=dev
-checks	Run docker compose build	2026-10-30T14:51:37.6963691Z #15 ...
-checks	Run docker compose build	2026-10-30T14:51:37.6964192Z 
-checks	Run docker compose build	2026-10-30T14:51:37.6965213Z #16 [sentiment 1/6] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
-checks	Run docker compose build	2026-10-30T14:51:37.6966436Z #16 resolve docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 done
-checks	Run docker compose build	2026-10-30T14:51:37.6967614Z #16 sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 10.37kB / 10.37kB done
-checks	Run docker compose build	2026-10-30T14:51:37.6968844Z #16 sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679 1.75kB / 1.75kB done
-checks	Run docker compose build	2026-10-30T14:51:37.6970281Z #16 sha256:de8d79606beff46114d4abd5c392116c62142cbe582f8ede92cf4a64e1a10ff5 5.49kB / 5.49kB done
-checks	Run docker compose build	2026-10-30T14:51:37.6971584Z #16 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.2s done
-checks	Run docker compose build	2026-10-30T14:51:37.6972872Z #16 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 1.29MB / 1.29MB 0.2s done
-checks	Run docker compose build	2026-10-30T14:51:37.6974343Z #16 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.2s done
-checks	Run docker compose build	2026-10-30T14:51:37.6975578Z #16 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 251B / 251B 0.3s done
-checks	Run docker compose build	2026-10-30T14:51:37.6976739Z #16 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 1.1s done
-checks	Run docker compose build	2026-10-30T14:51:37.6977892Z #16 extracting sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0.1s done
-checks	Run docker compose build	2026-10-30T14:51:37.6979074Z #16 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0.8s done
-checks	Run docker compose build	2026-10-30T14:51:37.6980689Z #16 extracting sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 done
-checks	Run docker compose build	2026-10-30T14:51:37.6981400Z #16 DONE 4.3s
-checks	Run docker compose build	2026-10-30T14:51:37.6981620Z 
-checks	Run docker compose build	2026-10-30T14:51:37.6981841Z #17 [sentiment 2/6] WORKDIR /app
-checks	Run docker compose build	2026-10-30T14:51:37.6982218Z #17 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:37.6982398Z 
-checks	Run docker compose build	2026-10-30T14:51:37.6982665Z #18 [sentiment 3/6] COPY requirements.txt ./
-checks	Run docker compose build	2026-10-30T14:51:37.6983101Z #18 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:37.8496952Z 
-checks	Run docker compose build	2026-10-30T14:51:37.8498570Z #19 [sentiment 4/6] RUN pip install --no-cache-dir -r requirements.txt
-checks	Run docker compose build	2026-10-30T14:51:38.9141701Z #19 ...
-checks	Run docker compose build	2026-10-30T14:51:38.9142335Z 
-checks	Run docker compose build	2026-10-30T14:51:38.9143142Z #15 [api 4/5] RUN npm ci --omit=dev
-checks	Run docker compose build	2026-10-30T14:51:38.9144155Z #15 1.805 
-checks	Run docker compose build	2026-10-30T14:51:38.9145001Z #15 1.805 added 88 packages, and audited 89 packages in 2s
-checks	Run docker compose build	2026-10-30T14:51:38.9145772Z #15 1.805 
-checks	Run docker compose build	2026-10-30T14:51:38.9146433Z #15 1.805 19 packages are looking for funding
-checks	Run docker compose build	2026-10-30T14:51:38.9147252Z #15 1.805   run `npm fund` for details
-checks	Run docker compose build	2026-10-30T14:51:38.9147938Z #15 1.806 
-checks	Run docker compose build	2026-10-30T14:51:38.9148567Z #15 1.806 found 0 vulnerabilities
-checks	Run docker compose build	2026-10-30T14:51:38.9149221Z #15 1.807 npm notice
-checks	Run docker compose build	2026-10-30T14:51:38.9150113Z #15 1.807 npm notice New major version of npm available! 10.8.2 -> 12.2.1
-checks	Run docker compose build	2026-10-30T14:51:38.9151368Z #15 1.807 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
-checks	Run docker compose build	2026-10-30T14:51:38.9152536Z #15 1.807 npm notice To update run: npm install -g npm@12.2.1
-checks	Run docker compose build	2026-10-30T14:51:38.9153311Z #15 1.807 npm notice
-checks	Run docker compose build	2026-10-30T14:51:38.9154111Z #15 DONE 1.9s
-checks	Run docker compose build	2026-10-30T14:51:39.0586829Z 
-checks	Run docker compose build	2026-10-30T14:51:39.0587574Z #20 [api 5/5] COPY . .
-checks	Run docker compose build	2026-10-30T14:51:39.0588049Z #20 DONE 0.3s
-checks	Run docker compose build	2026-10-30T14:51:39.0588252Z 
-checks	Run docker compose build	2026-10-30T14:51:39.0588724Z #19 [sentiment 4/6] RUN pip install --no-cache-dir -r requirements.txt
-checks	Run docker compose build	2026-10-30T14:51:39.6891419Z #19 1.992 Collecting Flask<4,>=3.0 (from -r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:39.8112369Z #19 2.018   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
-checks	Run docker compose build	2026-10-30T14:51:39.8113979Z #19 2.048 Collecting nltk<4,>=3.8 (from -r requirements.txt (line 2))
-checks	Run docker compose build	2026-10-30T14:51:39.8115294Z #19 2.051   Downloading nltk-3.10.4-py3-none-any.whl.metadata (5.0 kB)
-checks	Run docker compose build	2026-10-30T14:51:39.8116415Z #19 2.078 Collecting blinker>=1.9.0 (from Flask<4,>=3.0->-r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:39.8117401Z #19 2.082   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
-checks	Run docker compose build	2026-10-30T14:51:39.8118758Z #19 2.114 Collecting click>=8.1.3 (from Flask<4,>=3.0->-r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:39.9342119Z #19 2.118   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
-checks	Run docker compose build	2026-10-30T14:51:39.9343030Z #19 2.139 Collecting itsdangerous>=2.2.0 (from Flask<4,>=3.0->-r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:39.9344064Z #19 2.141   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
-checks	Run docker compose build	2026-10-30T14:51:39.9344765Z #19 2.164 Collecting jinja2>=3.1.2 (from Flask<4,>=3.0->-r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:39.9345390Z #19 2.169   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
-checks	Run docker compose build	2026-10-30T14:51:39.9346155Z #19 2.237 Collecting markupsafe>=2.1.1 (from Flask<4,>=3.0->-r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:40.1807383Z #19 ...
-checks	Run docker compose build	2026-10-30T14:51:40.1807690Z 
-checks	Run docker compose build	2026-10-30T14:51:40.1807917Z #21 [api] exporting to image
-checks	Run docker compose build	2026-10-30T14:51:40.1808550Z #21 exporting layers 0.9s done
-checks	Run docker compose build	2026-10-30T14:51:40.1809629Z #21 writing image sha256:dca17eb31b99925261701ac1da6549fb38230ac1099df3dc3f592f2208102223 done
-checks	Run docker compose build	2026-10-30T14:51:40.1810838Z #21 naming to docker.io/library/xrwvm-fullstack_developer_capstone-api done
-checks	Run docker compose build	2026-10-30T14:51:40.1811502Z #21 DONE 1.0s
-checks	Run docker compose build	2026-10-30T14:51:40.1811706Z 
-checks	Run docker compose build	2026-10-30T14:51:40.1812011Z #22 [api] resolving provenance for metadata file
-checks	Run docker compose build	2026-10-30T14:51:40.1812515Z #22 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:40.1812699Z 
-checks	Run docker compose build	2026-10-30T14:51:40.1813164Z #19 [sentiment 4/6] RUN pip install --no-cache-dir -r requirements.txt
-checks	Run docker compose build	2026-10-30T14:51:40.1814815Z #19 2.240   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.1816828Z #19 2.267 Collecting werkzeug>=3.1.0 (from Flask<4,>=3.0->-r requirements.txt (line 1))
-checks	Run docker compose build	2026-10-30T14:51:40.1817859Z #19 2.270   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.1818888Z #19 2.292 Collecting defusedxml (from nltk<4,>=3.8->-r requirements.txt (line 2))
-checks	Run docker compose build	2026-10-30T14:51:40.1819937Z #19 2.295   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.1820942Z #19 2.323 Collecting joblib (from nltk<4,>=3.8->-r requirements.txt (line 2))
-checks	Run docker compose build	2026-10-30T14:51:40.1821883Z #19 2.326   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.4476294Z #19 2.750 Collecting regex>=2021.8.3 (from nltk<4,>=3.8->-r requirements.txt (line 2))
-checks	Run docker compose build	2026-10-30T14:51:40.5493043Z #19 2.753   Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.5494484Z #19 2.756      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.6/40.6 kB 266.6 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.5495120Z #19 2.802 Collecting tqdm (from nltk<4,>=3.8->-r requirements.txt (line 2))
-checks	Run docker compose build	2026-10-30T14:51:40.5495689Z #19 2.805   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.5496343Z #19 2.807      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 279.4 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.5496980Z #19 2.849 Collecting cloudpickle>=3.0 (from joblib->nltk<4,>=3.8->-r requirements.txt (line 2))
-checks	Run docker compose build	2026-10-30T14:51:40.5497615Z #19 2.852   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7387958Z #19 2.865 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7389298Z #19 2.868    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 256.2 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7390055Z #19 2.871 Downloading nltk-3.10.4-py3-none-any.whl (1.7 MB)
-checks	Run docker compose build	2026-10-30T14:51:40.7390931Z #19 2.881    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 192.0 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7391737Z #19 2.885 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7392420Z #19 2.887 Downloading click-8.5.0-py3-none-any.whl (125 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7393287Z #19 2.889    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 357.5 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7394293Z #19 2.892 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7395681Z #19 2.894 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7396718Z #19 2.896    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 355.9 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7398025Z #19 2.899 Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7399632Z #19 2.902 Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (804 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7401032Z #19 2.907    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.0/805.0 kB 275.2 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7401855Z #19 2.910 Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7402849Z #19 2.912    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 334.0 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7403938Z #19 2.915 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7404758Z #19 2.917 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7405765Z #19 2.919    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 324.3 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7406562Z #19 2.922 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7407321Z #19 2.923    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 347.1 MB/s eta 0:00:00
-checks	Run docker compose build	2026-10-30T14:51:40.7407843Z #19 2.926 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
-checks	Run docker compose build	2026-10-30T14:51:40.7408740Z #19 3.041 Installing collected packages: tqdm, regex, markupsafe, itsdangerous, defusedxml, cloudpickle, click, blinker, werkzeug, joblib, jinja2, nltk, Flask
-checks	Run docker compose build	2026-10-30T14:51:42.0582633Z #19 4.361 Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.0 cloudpickle-3.1.2 defusedxml-0.7.1 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.6.0 markupsafe-3.0.4 nltk-3.10.4 regex-2026.9.29 tqdm-4.70.1 werkzeug-3.1.9
-checks	Run docker compose build	2026-10-30T14:51:42.2694367Z #19 4.361 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
-checks	Run docker compose build	2026-10-30T14:51:42.2695458Z #19 4.421 
-checks	Run docker compose build	2026-10-30T14:51:42.2695859Z #19 4.421 [notice] A new release of pip is available: 24.0 -> 26.2.2
-checks	Run docker compose build	2026-10-30T14:51:42.2696368Z #19 4.421 [notice] To update, run: pip install --upgrade pip
-checks	Run docker compose build	2026-10-30T14:51:42.3253469Z #19 DONE 4.6s
-checks	Run docker compose build	2026-10-30T14:51:42.5018755Z 
-checks	Run docker compose build	2026-10-30T14:51:42.5019523Z #23 [sentiment 5/6] COPY app.py ./
-checks	Run docker compose build	2026-10-30T14:51:42.5020058Z #23 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:42.5020264Z 
-checks	Run docker compose build	2026-10-30T14:51:42.5020564Z #24 [sentiment 6/6] COPY sentiment ./sentiment
-checks	Run docker compose build	2026-10-30T14:51:42.5021097Z #24 DONE 0.0s
-checks	Run docker compose build	2026-10-30T14:51:42.5021273Z 
-checks	Run docker compose build	2026-10-30T14:51:42.5021519Z #25 [sentiment] exporting to image
-checks	Run docker compose build	2026-10-30T14:51:43.0511374Z #25 exporting layers 0.7s done
-checks	Run docker compose build	2026-10-30T14:51:43.0774775Z #25 writing image sha256:0c59b31011738b152ad44f3cc75bfaae4ecb51630f4c45c54aeb443f14529fc9 done
-checks	Run docker compose build	2026-10-30T14:51:43.0776108Z  api  Built
-checks	Run docker compose build	2026-10-30T14:51:43.0776936Z  sentiment  Built
-checks	Run docker compose build	2026-10-30T14:51:43.0777911Z #25 naming to docker.io/library/xrwvm-fullstack_developer_capstone-sentiment done
-checks	Run docker compose build	2026-10-30T14:51:43.0778774Z #25 DONE 0.7s
-checks	Run docker compose build	2026-10-30T14:51:43.0779200Z 
-checks	Run docker compose build	2026-10-30T14:51:43.0779597Z #26 [sentiment] resolving provenance for metadata file
-checks	Run docker compose build	2026-10-30T14:51:43.0780168Z #26 DONE 0.0s
-checks	Post Run actions/setup-node@v4	﻿2026-10-30T14:51:43.0936985Z Post job cleanup.
-checks	Post Run actions/setup-node@v4	2026-10-30T14:51:43.2203102Z (node:2826) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-checks	Post Run actions/setup-node@v4	2026-10-30T14:51:43.2204215Z (Use `node --trace-deprecation ...` to show where the warning was created)
-checks	Post Run actions/setup-python@v5	﻿2026-10-30T14:51:43.2413336Z Post job cleanup.
-checks	Post Run actions/setup-python@v5	2026-10-30T14:51:43.3730711Z (node:2834) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-checks	Post Run actions/setup-python@v5	2026-10-30T14:51:43.3731608Z (Use `node --trace-deprecation ...` to show where the warning was created)
-checks	Post Run actions/checkout@v4	﻿2026-10-30T14:51:43.3927508Z Post job cleanup.
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.4872930Z [command]/usr/bin/git version
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.4921989Z git version 2.56.0
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.4964889Z Temporarily overriding HOME='/home/runner/work/_temp/b5f3af9e-a129-46ba-85d3-92827cd195c5' before making global git config changes
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.4966339Z Adding repository directory to the temporary git global config as a safe directory
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.4971719Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5016098Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5057468Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5351160Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5382142Z http.https://github.com/.extraheader
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5395662Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5443125Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5763024Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-checks	Post Run actions/checkout@v4	2026-10-30T14:51:43.5823052Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-checks	Complete job	﻿2026-10-30T14:51:43.6260122Z Cleaning up orphan processes
-checks	Complete job	2026-10-30T14:51:43.6661764Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+checks	Set up job	﻿2026-10-30T15:07:39.8790101Z Current runner version: '2.338.0'
+checks	Set up job	2026-10-30T15:07:39.8809818Z ##[group]Runner Image Provisioner
+checks	Set up job	2026-10-30T15:07:39.8810442Z Hosted Compute Agent
+checks	Set up job	2026-10-30T15:07:39.8810898Z Version: 20261021.618
+checks	Set up job	2026-10-30T15:07:39.8811278Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+checks	Set up job	2026-10-30T15:07:39.8811767Z Build Date: 2026-10-21T00:45:21Z
+checks	Set up job	2026-10-30T15:07:39.8812175Z Worker ID: {0e33362e-4cbf-42c3-8d03-10c632777fa2}
+checks	Set up job	2026-10-30T15:07:39.8812609Z Region: centralus
+checks	Set up job	2026-10-30T15:07:39.8812992Z Cloud: Azure
+checks	Set up job	2026-10-30T15:07:39.8813321Z ##[endgroup]
+checks	Set up job	2026-10-30T15:07:39.8814112Z ##[group]Operating System
+checks	Set up job	2026-10-30T15:07:39.8814504Z Ubuntu
+checks	Set up job	2026-10-30T15:07:39.8814859Z 24.04.5
+checks	Set up job	2026-10-30T15:07:39.8815205Z LTS
+checks	Set up job	2026-10-30T15:07:39.8815519Z ##[endgroup]
+checks	Set up job	2026-10-30T15:07:39.8815838Z ##[group]Runner Image
+checks	Set up job	2026-10-30T15:07:39.8816281Z Image: ubuntu-24.04
+checks	Set up job	2026-10-30T15:07:39.8816649Z Version: 20261025.353.1
+checks	Set up job	2026-10-30T15:07:39.8817348Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+checks	Set up job	2026-10-30T15:07:39.8818807Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+checks	Set up job	2026-10-30T15:07:39.8819367Z ##[endgroup]
+checks	Set up job	2026-10-30T15:07:39.8820087Z ##[group]GITHUB_TOKEN Permissions
+checks	Set up job	2026-10-30T15:07:39.8821549Z Contents: read
+checks	Set up job	2026-10-30T15:07:39.8821922Z Metadata: read
+checks	Set up job	2026-10-30T15:07:39.8822313Z Packages: read
+checks	Set up job	2026-10-30T15:07:39.8822685Z ##[endgroup]
+checks	Set up job	2026-10-30T15:07:39.8824095Z Secret source: Actions
+checks	Set up job	2026-10-30T15:07:39.8824720Z Cache mode: write
+checks	Set up job	2026-10-30T15:07:39.8825136Z Prepare workflow directory
+checks	Set up job	2026-10-30T15:07:39.9037238Z Prepare all required actions
+checks	Set up job	2026-10-30T15:07:39.9068402Z Getting action download info
+checks	Set up job	2026-10-30T15:07:40.1991212Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+checks	Set up job	2026-10-30T15:07:40.3047592Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+checks	Set up job	2026-10-30T15:07:40.4070439Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+checks	Set up job	2026-10-30T15:07:40.5820575Z Complete job name: checks
+checks	Run actions/checkout@v4	﻿2026-10-30T15:07:40.6318044Z ##[group]Run actions/checkout@v4
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6318487Z with:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6318771Z   repository: PhongLam26/xrwvm-fullstack_developer_capstone
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6321000Z   token: ***
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6321214Z   ssh-strict: true
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6321434Z   ssh-user: git
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6321662Z   persist-credentials: true
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6321912Z   clean: true
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6322141Z   sparse-checkout-cone-mode: true
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6322407Z   fetch-depth: 1
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6322625Z   fetch-tags: false
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6322851Z   show-progress: true
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6323078Z   lfs: false
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6323289Z   submodules: false
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6324263Z   set-safe-directory: true
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6324656Z   allow-unsafe-pr-checkout: false
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.6325166Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8458500Z Syncing repository: PhongLam26/xrwvm-fullstack_developer_capstone
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8460340Z ##[group]Getting Git version info
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8461160Z Working directory is '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8461888Z [command]/usr/bin/git version
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8540426Z git version 2.56.0
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8557468Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8563089Z Temporarily overriding HOME='/home/runner/work/_temp/0d263df0-2ff4-41b6-9026-37a5305d7c7e' before making global git config changes
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8564632Z Adding repository directory to the temporary git global config as a safe directory
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8566003Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8616097Z Deleting the contents of '/home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone'
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8619657Z ##[group]Initializing the repository
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8623263Z [command]/usr/bin/git init /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8723070Z hint: Using 'master' as the name for the initial branch. This default branch name
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8723752Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8724277Z hint: to use in all of your new repositories, which will suppress this warning,
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8724719Z hint: call:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8724948Z hint:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8725271Z hint: 	git config --global init.defaultBranch <name>
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8725617Z hint:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8725942Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8726454Z hint: 'development'. The just-created branch can be renamed via this command:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8726859Z hint:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8727092Z hint: 	git branch -m <name>
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8727412Z hint:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8727768Z hint: Disable this message with "git config set advice.defaultBranchName false"
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8740565Z Initialized empty Git repository in /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone/.git/
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8750503Z [command]/usr/bin/git remote add origin https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8791334Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8791927Z ##[group]Disabling automatic garbage collection
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8794167Z [command]/usr/bin/git config --local gc.auto 0
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8820619Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8821386Z ##[group]Setting up auth
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8825693Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.8857381Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9194911Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9232862Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9434096Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9469779Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9651338Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9691116Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9691772Z ##[group]Fetching the repository
+checks	Run actions/checkout@v4	2026-10-30T15:07:40.9700330Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +ff1e55641e0488e6821fc91040e42f95ee6e23b6:refs/remotes/origin/main
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6082342Z From https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6084721Z  * [new ref]         ff1e55641e0488e6821fc91040e42f95ee6e23b6 -> origin/main
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6088115Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6089386Z ##[group]Determining the checkout info
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6090470Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6091481Z [command]/usr/bin/git sparse-checkout disable
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6147276Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6185438Z ##[group]Checking out the ref
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6187405Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6376309Z Switched to a new branch 'main'
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6380473Z branch 'main' set up to track 'origin/main'.
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6387763Z ##[endgroup]
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6437250Z [command]/usr/bin/git log -1 --format=%H
+checks	Run actions/checkout@v4	2026-10-30T15:07:41.6469368Z ff1e55641e0488e6821fc91040e42f95ee6e23b6
+checks	Run actions/setup-python@v5	﻿2026-10-30T15:07:41.6830080Z ##[group]Run actions/setup-python@v5
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6830908Z with:
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6831471Z   python-version: 3.11
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6832102Z   check-latest: false
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6838550Z   token: ***
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6839152Z   update-environment: true
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6839856Z   allow-prereleases: false
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6840522Z   freethreaded: false
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.6841129Z ##[endgroup]
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.7758510Z ##[group]Installed versions
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.7818601Z (node:2076) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.7820662Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.7822135Z Successfully set up CPython (3.11.17)
+checks	Run actions/setup-python@v5	2026-10-30T15:07:41.7823636Z ##[endgroup]
+checks	Run pip install -r server/requirements.txt	﻿2026-10-30T15:07:41.8420772Z ##[group]Run pip install -r server/requirements.txt
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8421868Z ^[[36;1mpip install -r server/requirements.txt^[[0m
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8451553Z shell: /usr/bin/bash -e {0}
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8452185Z env:
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8452845Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8453906Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8454961Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8455911Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8456882Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8457854Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:41.8458808Z ##[endgroup]
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.6007426Z Collecting Django<5.3,>=5.2 (from -r server/requirements.txt (line 1))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.6818377Z   Downloading django-5.2.18-py3-none-any.whl.metadata (4.1 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.7119011Z Collecting requests<3,>=2.32 (from -r server/requirements.txt (line 2))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.7269367Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.8517147Z Collecting Pillow>=10 (from -r server/requirements.txt (line 3))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.8676138Z   Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.8888028Z Collecting gunicorn>=23 (from -r server/requirements.txt (line 4))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.9041888Z   Downloading gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.9315472Z Collecting python-dotenv>=1 (from -r server/requirements.txt (line 5))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.9485337Z   Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.9752193Z Collecting asgiref>=3.8.1 (from Django<5.3,>=5.2->-r server/requirements.txt (line 1))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:42.9903612Z   Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.0069482Z Collecting sqlparse>=0.3.1 (from Django<5.3,>=5.2->-r server/requirements.txt (line 1))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.0220621Z   Downloading sqlparse-0.6.0-py3-none-any.whl.metadata (6.0 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.1080554Z Collecting charset_normalizer<4,>=2 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.1236421Z   Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.1481861Z Collecting idna<4,>=2.5 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.1636113Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.1843948Z Collecting urllib3<3,>=1.26 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.1994604Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.2173511Z Collecting certifi>=2023.5.7 (from requests<3,>=2.32->-r server/requirements.txt (line 2))
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.2326075Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.2548179Z Downloading django-5.2.18-py3-none-any.whl (8.3 MB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.5079303Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 34.8 MB/s  0:00:00
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.5239228Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.5408520Z Downloading charset_normalizer-3.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (269 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.5612926Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.5791335Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.5975655Z Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.7869836Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 37.3 MB/s  0:00:00
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.8026022Z Downloading gunicorn-26.2.0-py3-none-any.whl (228 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.8223427Z Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.8392389Z Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.8561208Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.8746181Z Downloading sqlparse-0.6.0-py3-none-any.whl (50 kB)
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:43.9629600Z Installing collected packages: urllib3, sqlparse, python-dotenv, Pillow, idna, gunicorn, charset_normalizer, certifi, asgiref, requests, Django
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:45.3521300Z 
+checks	Run pip install -r server/requirements.txt	2026-10-30T15:07:45.3530215Z Successfully installed Django-5.2.18 Pillow-13.0.0 asgiref-3.13.0 certifi-2026.10.23 charset_normalizer-3.5.2 gunicorn-26.2.0 idna-3.20 python-dotenv-1.2.4 requests-2.34.2 sqlparse-0.6.0 urllib3-2.8.0
+checks	Run python manage.py check	﻿2026-10-30T15:07:45.4103774Z ##[group]Run python manage.py check
+checks	Run python manage.py check	2026-10-30T15:07:45.4103996Z ^[[36;1mpython manage.py check^[[0m
+checks	Run python manage.py check	2026-10-30T15:07:45.4121179Z shell: /usr/bin/bash -e {0}
+checks	Run python manage.py check	2026-10-30T15:07:45.4121321Z env:
+checks	Run python manage.py check	2026-10-30T15:07:45.4121472Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py check	2026-10-30T15:07:45.4121711Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run python manage.py check	2026-10-30T15:07:45.4121957Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py check	2026-10-30T15:07:45.4122169Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py check	2026-10-30T15:07:45.4122379Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py check	2026-10-30T15:07:45.4122587Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run python manage.py check	2026-10-30T15:07:45.4122761Z ##[endgroup]
+checks	Run python manage.py check	2026-10-30T15:07:46.0046010Z System check identified no issues (0 silenced).
+checks	Run python manage.py test	﻿2026-10-30T15:07:46.0538104Z ##[group]Run python manage.py test
+checks	Run python manage.py test	2026-10-30T15:07:46.0538317Z ^[[36;1mpython manage.py test^[[0m
+checks	Run python manage.py test	2026-10-30T15:07:46.0555034Z shell: /usr/bin/bash -e {0}
+checks	Run python manage.py test	2026-10-30T15:07:46.0555175Z env:
+checks	Run python manage.py test	2026-10-30T15:07:46.0555326Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py test	2026-10-30T15:07:46.0555564Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run python manage.py test	2026-10-30T15:07:46.0555799Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py test	2026-10-30T15:07:46.0556029Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py test	2026-10-30T15:07:46.0556242Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run python manage.py test	2026-10-30T15:07:46.0556456Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run python manage.py test	2026-10-30T15:07:46.0556636Z ##[endgroup]
+checks	Run python manage.py test	2026-10-30T15:07:46.5683775Z Creating test database for alias 'default'...
+checks	Run python manage.py test	2026-10-30T15:07:48.0979553Z ........Connected service request failed: Service unavailable
+checks	Run python manage.py test	2026-10-30T15:07:48.0981733Z .
+checks	Run python manage.py test	2026-10-30T15:07:48.0982067Z ----------------------------------------------------------------------
+checks	Run python manage.py test	2026-10-30T15:07:48.0982511Z Ran 9 tests in 1.447s
+checks	Run python manage.py test	2026-10-30T15:07:48.0982631Z 
+checks	Run python manage.py test	2026-10-30T15:07:48.0982694Z OK
+checks	Run python manage.py test	2026-10-30T15:07:48.0982886Z Destroying test database for alias 'default'...
+checks	Run python manage.py test	2026-10-30T15:07:48.0988629Z Found 9 test(s).
+checks	Run python manage.py test	2026-10-30T15:07:48.0989097Z System check identified no issues (0 silenced).
+checks	Run actions/setup-node@v4	﻿2026-10-30T15:07:48.1599690Z ##[group]Run actions/setup-node@v4
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1600007Z with:
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1600117Z   node-version: 20
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1600233Z   always-auth: false
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1600373Z   check-latest: false
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1601818Z   token: ***
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1601925Z env:
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1602070Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1602314Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1602553Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1602768Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1602980Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1603193Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.1603371Z ##[endgroup]
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.2522365Z Attempting to download 20...
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.2631482Z (node:2127) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks	Run actions/setup-node@v4	2026-10-30T15:07:48.2632094Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks	Run actions/setup-node@v4	2026-10-30T15:07:49.1095305Z Acquiring 20.20.2 - x64 from https://github.com/actions/node-versions/releases/download/20.20.2-23521894959/node-20.20.2-linux-x64.tar.gz
+checks	Run actions/setup-node@v4	2026-10-30T15:07:49.5162370Z Extracting ...
+checks	Run actions/setup-node@v4	2026-10-30T15:07:49.5266368Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/949fe5b3-7c08-46fb-be4e-c25ab5e20c74 -f /home/runner/work/_temp/870e5694-8363-4617-b33e-e9bf0b181c8f
+checks	Run actions/setup-node@v4	2026-10-30T15:07:50.2687845Z Adding to the cache ...
+checks	Run actions/setup-node@v4	2026-10-30T15:07:51.7881828Z ##[group]Environment details
+checks	Run actions/setup-node@v4	2026-10-30T15:07:51.9578078Z node: v20.20.2
+checks	Run actions/setup-node@v4	2026-10-30T15:07:51.9578382Z npm: 10.8.2
+checks	Run actions/setup-node@v4	2026-10-30T15:07:51.9578496Z yarn: 1.22.22
+checks	Run actions/setup-node@v4	2026-10-30T15:07:51.9578950Z ##[endgroup]
+checks	Run npm ci	﻿2026-10-30T15:07:51.9769549Z ##[group]Run npm ci
+checks	Run npm ci	2026-10-30T15:07:51.9769701Z ^[[36;1mnpm ci^[[0m
+checks	Run npm ci	2026-10-30T15:07:51.9786073Z shell: /usr/bin/bash -e {0}
+checks	Run npm ci	2026-10-30T15:07:51.9786207Z env:
+checks	Run npm ci	2026-10-30T15:07:51.9786367Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci	2026-10-30T15:07:51.9786602Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run npm ci	2026-10-30T15:07:51.9786831Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci	2026-10-30T15:07:51.9787036Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci	2026-10-30T15:07:51.9787247Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci	2026-10-30T15:07:51.9787455Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run npm ci	2026-10-30T15:07:51.9787635Z ##[endgroup]
+checks	Run npm ci	2026-10-30T15:07:54.3415135Z npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+checks	Run npm ci	2026-10-30T15:07:54.6188395Z npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+checks	Run npm ci	2026-10-30T15:07:54.6189842Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+checks	Run npm ci	2026-10-30T15:07:54.7096627Z npm warn deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
+checks	Run npm ci	2026-10-30T15:07:54.7462642Z npm warn deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
+checks	Run npm ci	2026-10-30T15:07:55.6855139Z npm warn deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+checks	Run npm ci	2026-10-30T15:07:57.6633653Z npm warn deprecated @babel/plugin-proposal-private-property-in-object@7.21.11: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-property-in-object instead.
+checks	Run npm ci	2026-10-30T15:07:57.6718467Z npm warn deprecated @babel/plugin-proposal-private-methods@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-private-methods instead.
+checks	Run npm ci	2026-10-30T15:07:57.6747293Z npm warn deprecated @babel/plugin-proposal-numeric-separator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-numeric-separator instead.
+checks	Run npm ci	2026-10-30T15:07:57.6891019Z npm warn deprecated @babel/plugin-proposal-nullish-coalescing-operator@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-nullish-coalescing-operator instead.
+checks	Run npm ci	2026-10-30T15:07:57.6930578Z npm warn deprecated @babel/plugin-proposal-class-properties@7.18.6: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-class-properties instead.
+checks	Run npm ci	2026-10-30T15:07:57.6991991Z npm warn deprecated @babel/plugin-proposal-optional-chaining@7.21.0: This proposal has been merged to the ECMAScript standard and thus this plugin is no longer maintained. Please use @babel/plugin-transform-optional-chaining instead.
+checks	Run npm ci	2026-10-30T15:08:05.8091272Z 
+checks	Run npm ci	2026-10-30T15:08:05.8092014Z added 1534 packages, and audited 1535 packages in 14s
+checks	Run npm ci	2026-10-30T15:08:05.8092217Z 
+checks	Run npm ci	2026-10-30T15:08:05.8092316Z 246 packages are looking for funding
+checks	Run npm ci	2026-10-30T15:08:05.8092498Z   run `npm fund` for details
+checks	Run npm ci	2026-10-30T15:08:05.8796447Z 
+checks	Run npm ci	2026-10-30T15:08:05.8797441Z 80 vulnerabilities (21 low, 20 moderate, 35 high, 4 critical)
+checks	Run npm ci	2026-10-30T15:08:05.8797750Z 
+checks	Run npm ci	2026-10-30T15:08:05.8798155Z To address issues that do not require attention, run:
+checks	Run npm ci	2026-10-30T15:08:05.8798441Z   npm audit fix
+checks	Run npm ci	2026-10-30T15:08:05.8798552Z 
+checks	Run npm ci	2026-10-30T15:08:05.8798759Z To address all issues (including breaking changes), run:
+checks	Run npm ci	2026-10-30T15:08:05.8799080Z   npm audit fix --force
+checks	Run npm ci	2026-10-30T15:08:05.8799214Z 
+checks	Run npm ci	2026-10-30T15:08:05.8800059Z Run `npm audit` for details.
+checks	Run npm run build	﻿2026-10-30T15:08:05.9206130Z ##[group]Run npm run build
+checks	Run npm run build	2026-10-30T15:08:05.9206340Z ^[[36;1mnpm run build^[[0m
+checks	Run npm run build	2026-10-30T15:08:05.9224335Z shell: /usr/bin/bash -e {0}
+checks	Run npm run build	2026-10-30T15:08:05.9224480Z env:
+checks	Run npm run build	2026-10-30T15:08:05.9224631Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm run build	2026-10-30T15:08:05.9224879Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run npm run build	2026-10-30T15:08:05.9225123Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm run build	2026-10-30T15:08:05.9225337Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm run build	2026-10-30T15:08:05.9225555Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm run build	2026-10-30T15:08:05.9225772Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run npm run build	2026-10-30T15:08:05.9225956Z ##[endgroup]
+checks	Run npm run build	2026-10-30T15:08:06.0001282Z 
+checks	Run npm run build	2026-10-30T15:08:06.0002027Z > usermgmt@0.1.0 build
+checks	Run npm run build	2026-10-30T15:08:06.0002380Z > react-scripts build
+checks	Run npm run build	2026-10-30T15:08:06.0002522Z 
+checks	Run npm run build	2026-10-30T15:08:06.6605588Z Creating an optimized production build...
+checks	Run npm run build	2026-10-30T15:08:06.7264650Z Browserslist: caniuse-lite is outdated. Please run:
+checks	Run npm run build	2026-10-30T15:08:06.7265081Z   npx update-browserslist-db@latest
+checks	Run npm run build	2026-10-30T15:08:06.7265475Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+checks	Run npm run build	2026-10-30T15:08:10.3557306Z Browserslist: caniuse-lite is outdated. Please run:
+checks	Run npm run build	2026-10-30T15:08:10.3558032Z   npx update-browserslist-db@latest
+checks	Run npm run build	2026-10-30T15:08:10.3558626Z   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+checks	Run npm run build	2026-10-30T15:08:10.6627099Z Compiled successfully.
+checks	Run npm run build	2026-10-30T15:08:10.6627400Z 
+checks	Run npm run build	2026-10-30T15:08:10.6627543Z File sizes after gzip:
+checks	Run npm run build	2026-10-30T15:08:10.6627679Z 
+checks	Run npm run build	2026-10-30T15:08:10.6695114Z   55.6 kB  build/static/js/main.06d3654d.js
+checks	Run npm run build	2026-10-30T15:08:10.6695430Z   1.03 kB  build/static/css/main.12698a91.css
+checks	Run npm run build	2026-10-30T15:08:10.6695565Z 
+checks	Run npm run build	2026-10-30T15:08:10.6696236Z The project was built assuming it is hosted at /.
+checks	Run npm run build	2026-10-30T15:08:10.6696700Z You can control this with the homepage field in your package.json.
+checks	Run npm run build	2026-10-30T15:08:10.6696973Z 
+checks	Run npm run build	2026-10-30T15:08:10.6697071Z The build folder is ready to be deployed.
+checks	Run npm run build	2026-10-30T15:08:10.6697739Z You may serve it with a static server:
+checks	Run npm run build	2026-10-30T15:08:10.6698046Z 
+checks	Run npm run build	2026-10-30T15:08:10.6698876Z   npm install -g serve
+checks	Run npm run build	2026-10-30T15:08:10.6699164Z   serve -s build
+checks	Run npm run build	2026-10-30T15:08:10.6699292Z 
+checks	Run npm run build	2026-10-30T15:08:10.6699569Z Find out more about deployment here:
+checks	Run npm run build	2026-10-30T15:08:10.6699676Z 
+checks	Run npm run build	2026-10-30T15:08:10.6700239Z   https://cra.link/deployment
+checks	Run npm run build	2026-10-30T15:08:10.6700407Z 
+checks	Run npm ci && npm test	﻿2026-10-30T15:08:10.7163226Z ##[group]Run npm ci && npm test
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7163428Z ^[[36;1mnpm ci && npm test^[[0m
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7180495Z shell: /usr/bin/bash -e {0}
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7180641Z env:
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7180795Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7181046Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7181291Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7181507Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7181726Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7181957Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run npm ci && npm test	2026-10-30T15:08:10.7182143Z ##[endgroup]
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4806894Z 
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4807596Z added 88 packages, and audited 89 packages in 718ms
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4807865Z 
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4808100Z 19 packages are looking for funding
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4808282Z   run `npm fund` for details
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4813063Z 
+checks	Run npm ci && npm test	2026-10-30T15:08:11.4813174Z found 0 vulnerabilities
+checks	Run npm ci && npm test	2026-10-30T15:08:11.5658595Z 
+checks	Run npm ci && npm test	2026-10-30T15:08:11.5659313Z > cars-dealership-api@1.0.0 test
+checks	Run npm ci && npm test	2026-10-30T15:08:11.5659605Z > node --check app.js
+checks	Run npm ci && npm test	2026-10-30T15:08:11.5659700Z 
+checks	Run docker compose build	﻿2026-10-30T15:08:11.5960834Z ##[group]Run docker compose build
+checks	Run docker compose build	2026-10-30T15:08:11.5961046Z ^[[36;1mdocker compose build^[[0m
+checks	Run docker compose build	2026-10-30T15:08:11.5987705Z shell: /usr/bin/bash -e {0}
+checks	Run docker compose build	2026-10-30T15:08:11.5987871Z env:
+checks	Run docker compose build	2026-10-30T15:08:11.5988284Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run docker compose build	2026-10-30T15:08:11.5988584Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+checks	Run docker compose build	2026-10-30T15:08:11.5988883Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run docker compose build	2026-10-30T15:08:11.5989144Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run docker compose build	2026-10-30T15:08:11.5989415Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+checks	Run docker compose build	2026-10-30T15:08:11.5989673Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+checks	Run docker compose build	2026-10-30T15:08:11.5989899Z ##[endgroup]
+checks	Run docker compose build	2026-10-30T15:08:12.1473094Z #1 [internal] load local bake definitions
+checks	Run docker compose build	2026-10-30T15:08:12.2987426Z #1 reading from stdin 1.01kB done
+checks	Run docker compose build	2026-10-30T15:08:12.2987714Z #1 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:12.4361271Z 
+checks	Run docker compose build	2026-10-30T15:08:12.4362035Z #2 [api internal] load build definition from Dockerfile
+checks	Run docker compose build	2026-10-30T15:08:12.4362501Z #2 transferring dockerfile: 172B done
+checks	Run docker compose build	2026-10-30T15:08:12.4362810Z #2 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:12.4362955Z 
+checks	Run docker compose build	2026-10-30T15:08:12.4363137Z #3 [sentiment internal] load build definition from Dockerfile
+checks	Run docker compose build	2026-10-30T15:08:12.4363490Z #3 transferring dockerfile: 260B done
+checks	Run docker compose build	2026-10-30T15:08:12.4363776Z #3 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:12.4363895Z 
+checks	Run docker compose build	2026-10-30T15:08:12.4364113Z #4 [auth] library/python:pull token for registry-1.docker.io
+checks	Run docker compose build	2026-10-30T15:08:12.5917801Z #4 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:12.5918233Z 
+checks	Run docker compose build	2026-10-30T15:08:12.5918422Z #5 [auth] library/node:pull token for registry-1.docker.io
+checks	Run docker compose build	2026-10-30T15:08:12.5918652Z #5 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:12.5918722Z 
+checks	Run docker compose build	2026-10-30T15:08:12.5918912Z #6 [sentiment internal] load metadata for docker.io/library/python:3.11-slim
+checks	Run docker compose build	2026-10-30T15:08:12.9353863Z #6 DONE 0.6s
+checks	Run docker compose build	2026-10-30T15:08:12.9354096Z 
+checks	Run docker compose build	2026-10-30T15:08:12.9354399Z #7 [api internal] load metadata for docker.io/library/node:20-slim
+checks	Run docker compose build	2026-10-30T15:08:13.0516057Z #7 DONE 0.7s
+checks	Run docker compose build	2026-10-30T15:08:13.0516279Z 
+checks	Run docker compose build	2026-10-30T15:08:13.0516477Z #8 [sentiment internal] load .dockerignore
+checks	Run docker compose build	2026-10-30T15:08:13.0516842Z #8 transferring context: 2B done
+checks	Run docker compose build	2026-10-30T15:08:13.0517139Z #8 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:13.0517256Z 
+checks	Run docker compose build	2026-10-30T15:08:13.0517408Z #9 [sentiment internal] load build context
+checks	Run docker compose build	2026-10-30T15:08:13.0519730Z #9 transferring context: 92.05kB done
+checks	Run docker compose build	2026-10-30T15:08:13.0519986Z #9 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:13.0520094Z 
+checks	Run docker compose build	2026-10-30T15:08:13.0520421Z #10 [api internal] load .dockerignore
+checks	Run docker compose build	2026-10-30T15:08:13.0520721Z #10 transferring context: 2B done
+checks	Run docker compose build	2026-10-30T15:08:13.0520955Z #10 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:13.0521063Z 
+checks	Run docker compose build	2026-10-30T15:08:13.0521645Z #11 [sentiment 1/6] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+checks	Run docker compose build	2026-10-30T15:08:13.0522584Z #11 resolve docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 done
+checks	Run docker compose build	2026-10-30T15:08:13.0523434Z #11 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0B / 14.46MB 0.1s
+checks	Run docker compose build	2026-10-30T15:08:13.0524193Z #11 sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60 10.37kB / 10.37kB done
+checks	Run docker compose build	2026-10-30T15:08:13.0524949Z #11 sha256:6d10e720318bd84cc3d88af92bb5a47189222e17620a2fd214da6445e4afb679 1.75kB / 1.75kB done
+checks	Run docker compose build	2026-10-30T15:08:13.0525711Z #11 sha256:de8d79606beff46114d4abd5c392116c62142cbe582f8ede92cf4a64e1a10ff5 5.49kB / 5.49kB done
+checks	Run docker compose build	2026-10-30T15:08:13.0526513Z #11 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 1.05MB / 29.86MB 0.1s
+checks	Run docker compose build	2026-10-30T15:08:13.0527198Z #11 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0B / 1.29MB 0.1s
+checks	Run docker compose build	2026-10-30T15:08:13.2614317Z #11 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.3s
+checks	Run docker compose build	2026-10-30T15:08:13.2614871Z #11 sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 1.29MB / 1.29MB 0.2s done
+checks	Run docker compose build	2026-10-30T15:08:13.2615280Z #11 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 251B / 251B 0.3s
+checks	Run docker compose build	2026-10-30T15:08:13.3908422Z #11 ...
+checks	Run docker compose build	2026-10-30T15:08:13.3908692Z 
+checks	Run docker compose build	2026-10-30T15:08:13.3908916Z #12 [api internal] load build context
+checks	Run docker compose build	2026-10-30T15:08:13.3909347Z #12 transferring context: 13.70MB 0.1s done
+checks	Run docker compose build	2026-10-30T15:08:13.3909653Z #12 DONE 0.3s
+checks	Run docker compose build	2026-10-30T15:08:13.3909761Z 
+checks	Run docker compose build	2026-10-30T15:08:13.3910240Z #11 [sentiment 1/6] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+checks	Run docker compose build	2026-10-30T15:08:13.3910996Z #11 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.4s
+checks	Run docker compose build	2026-10-30T15:08:13.3911726Z #11 sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 29.86MB / 29.86MB 0.3s done
+checks	Run docker compose build	2026-10-30T15:08:13.3912435Z #11 sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 251B / 251B 0.3s done
+checks	Run docker compose build	2026-10-30T15:08:13.3913148Z #11 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5
+checks	Run docker compose build	2026-10-30T15:08:13.5183848Z #11 sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 14.46MB / 14.46MB 0.4s done
+checks	Run docker compose build	2026-10-30T15:08:14.1942736Z #11 extracting sha256:6fc242d221a673263eabd14a9ad9584d3177c96e5cb504c891497338e2f912f5 0.9s done
+checks	Run docker compose build	2026-10-30T15:08:14.3064389Z #11 extracting sha256:ee5aaeba9945927662bea2702989dfd74d9273796415b896363e6a9c44d9a8ce 0.1s done
+checks	Run docker compose build	2026-10-30T15:08:19.5388218Z #11 ...
+checks	Run docker compose build	2026-10-30T15:08:19.5388456Z 
+checks	Run docker compose build	2026-10-30T15:08:19.5389009Z #13 [api 1/5] FROM docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
+checks	Run docker compose build	2026-10-30T15:08:19.5389869Z #13 resolve docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0 done
+checks	Run docker compose build	2026-10-30T15:08:19.5390609Z #13 sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0 6.49kB / 6.49kB done
+checks	Run docker compose build	2026-10-30T15:08:19.5391097Z #13 sha256:3d0f05455dea2c82e2f76e7e2543964c30f6b7d673fc1a83286736d44fe4c41c 1.93kB / 1.93kB done
+checks	Run docker compose build	2026-10-30T15:08:19.5391533Z #13 sha256:9da6b4e352d0d5c94963eba1832408f5b7b08839cd8be9b6610c05de5118c704 6.88kB / 6.88kB done
+checks	Run docker compose build	2026-10-30T15:08:19.5391959Z #13 sha256:ff86ea2e5edce334d19a34fbc65d1a511aa1fc823dba1110422f991aa56b44d4 28.24MB / 28.24MB 0.9s done
+checks	Run docker compose build	2026-10-30T15:08:19.5392395Z #13 sha256:e54aec64c365815cd7b91e718f00ac6e625562b1de09036b38614621b42c7582 3.31kB / 3.31kB 0.4s done
+checks	Run docker compose build	2026-10-30T15:08:19.5393171Z #13 sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f 41.42MB / 41.42MB 0.9s done
+checks	Run docker compose build	2026-10-30T15:08:19.5393594Z #13 sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2 1.71MB / 1.71MB 0.8s done
+checks	Run docker compose build	2026-10-30T15:08:19.5394005Z #13 extracting sha256:ff86ea2e5edce334d19a34fbc65d1a511aa1fc823dba1110422f991aa56b44d4 0.7s done
+checks	Run docker compose build	2026-10-30T15:08:19.5394419Z #13 sha256:3c02fd806613748139b8b8a14a69ae3518a1b0e863c57c35aada3b92ed87fb31 447B / 447B 0.9s done
+checks	Run docker compose build	2026-10-30T15:08:19.5394807Z #13 extracting sha256:e54aec64c365815cd7b91e718f00ac6e625562b1de09036b38614621b42c7582 done
+checks	Run docker compose build	2026-10-30T15:08:19.5395207Z #13 extracting sha256:804d4d68057cbb26cbcde9a735148ebc6589911bad32cf9dbddb5b0ba878bf1f 0.7s done
+checks	Run docker compose build	2026-10-30T15:08:20.8411573Z #13 extracting sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2
+checks	Run docker compose build	2026-10-30T15:08:20.9453153Z #13 extracting sha256:64cfb949317c9824fd081d55c59a7225bfe1f650c6395ba42d7ed0ccf51993d2 0.0s done
+checks	Run docker compose build	2026-10-30T15:08:20.9453712Z #13 ...
+checks	Run docker compose build	2026-10-30T15:08:20.9453829Z 
+checks	Run docker compose build	2026-10-30T15:08:20.9454248Z #11 [sentiment 1/6] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+checks	Run docker compose build	2026-10-30T15:08:20.9455012Z #11 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0.1s
+checks	Run docker compose build	2026-10-30T15:08:21.1681334Z #11 ...
+checks	Run docker compose build	2026-10-30T15:08:21.1682176Z 
+checks	Run docker compose build	2026-10-30T15:08:21.1683080Z #13 [api 1/5] FROM docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
+checks	Run docker compose build	2026-10-30T15:08:21.1683872Z #13 extracting sha256:3c02fd806613748139b8b8a14a69ae3518a1b0e863c57c35aada3b92ed87fb31 done
+checks	Run docker compose build	2026-10-30T15:08:21.1684626Z #13 DONE 8.1s
+checks	Run docker compose build	2026-10-30T15:08:21.1684760Z 
+checks	Run docker compose build	2026-10-30T15:08:21.1684871Z #14 [api 2/5] WORKDIR /app
+checks	Run docker compose build	2026-10-30T15:08:21.1685078Z #14 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:21.1685180Z 
+checks	Run docker compose build	2026-10-30T15:08:21.1685354Z #15 [api 3/5] COPY package*.json ./
+checks	Run docker compose build	2026-10-30T15:08:21.1685610Z #15 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:21.1685715Z 
+checks	Run docker compose build	2026-10-30T15:08:21.1686214Z #11 [sentiment 1/6] FROM docker.io/library/python:3.11-slim@sha256:673719e071ecf27434fd2635bbd8d00f49f4fdd81f243143438a42ced8bedf60
+checks	Run docker compose build	2026-10-30T15:08:21.5674542Z #11 extracting sha256:24ff04c921070df4f4dc987278926d5dabde59d57b55ae3665439331f79af932 0.6s done
+checks	Run docker compose build	2026-10-30T15:08:21.5813394Z #11 extracting sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580
+checks	Run docker compose build	2026-10-30T15:08:21.7823741Z #11 extracting sha256:361db81715472ecba5e656c314c299bd945309020483159596a8d123c2b1d580 done
+checks	Run docker compose build	2026-10-30T15:08:21.7824324Z #11 DONE 8.7s
+checks	Run docker compose build	2026-10-30T15:08:21.7826470Z 
+checks	Run docker compose build	2026-10-30T15:08:21.7826892Z #16 [sentiment 2/6] WORKDIR /app
+checks	Run docker compose build	2026-10-30T15:08:21.7827518Z #16 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:21.7828225Z 
+checks	Run docker compose build	2026-10-30T15:08:21.7828631Z #17 [sentiment 3/6] COPY requirements.txt ./
+checks	Run docker compose build	2026-10-30T15:08:21.7829066Z #17 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:21.7829314Z 
+checks	Run docker compose build	2026-10-30T15:08:21.7829728Z #18 [sentiment 4/6] RUN pip install --no-cache-dir -r requirements.txt
+checks	Run docker compose build	2026-10-30T15:08:22.5458593Z #18 ...
+checks	Run docker compose build	2026-10-30T15:08:22.5459112Z 
+checks	Run docker compose build	2026-10-30T15:08:22.5459870Z #19 [api 4/5] RUN npm ci --omit=dev
+checks	Run docker compose build	2026-10-30T15:08:22.5460441Z #19 1.195 
+checks	Run docker compose build	2026-10-30T15:08:22.5460803Z #19 1.195 added 88 packages, and audited 89 packages in 1s
+checks	Run docker compose build	2026-10-30T15:08:22.5461179Z #19 1.195 
+checks	Run docker compose build	2026-10-30T15:08:22.5461464Z #19 1.195 19 packages are looking for funding
+checks	Run docker compose build	2026-10-30T15:08:22.5461839Z #19 1.195   run `npm fund` for details
+checks	Run docker compose build	2026-10-30T15:08:22.5462100Z #19 1.195 
+checks	Run docker compose build	2026-10-30T15:08:22.5462387Z #19 1.195 found 0 vulnerabilities
+checks	Run docker compose build	2026-10-30T15:08:22.5462675Z #19 1.196 npm notice
+checks	Run docker compose build	2026-10-30T15:08:22.5463136Z #19 1.196 npm notice New major version of npm available! 10.8.2 -> 12.2.1
+checks	Run docker compose build	2026-10-30T15:08:22.5463834Z #19 1.196 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+checks	Run docker compose build	2026-10-30T15:08:22.5464437Z #19 1.196 npm notice To update run: npm install -g npm@12.2.1
+checks	Run docker compose build	2026-10-30T15:08:22.5464808Z #19 1.196 npm notice
+checks	Run docker compose build	2026-10-30T15:08:22.5465024Z #19 DONE 1.4s
+checks	Run docker compose build	2026-10-30T15:08:22.6972689Z 
+checks	Run docker compose build	2026-10-30T15:08:22.6973675Z #20 [api 5/5] COPY . .
+checks	Run docker compose build	2026-10-30T15:08:22.8918237Z #20 DONE 0.3s
+checks	Run docker compose build	2026-10-30T15:08:22.8918475Z 
+checks	Run docker compose build	2026-10-30T15:08:22.8918811Z #18 [sentiment 4/6] RUN pip install --no-cache-dir -r requirements.txt
+checks	Run docker compose build	2026-10-30T15:08:23.0626894Z #18 1.351 Collecting Flask<4,>=3.0 (from -r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.0627752Z #18 1.431   Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.1661548Z #18 1.465 Collecting nltk<4,>=3.8 (from -r requirements.txt (line 2))
+checks	Run docker compose build	2026-10-30T15:08:23.1662178Z #18 1.485   Downloading nltk-3.10.4-py3-none-any.whl.metadata (5.0 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.1662898Z #18 1.534 Collecting blinker>=1.9.0 (from Flask<4,>=3.0->-r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.2780452Z #18 1.551   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.2781003Z #18 1.592 Collecting click>=8.1.3 (from Flask<4,>=3.0->-r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.2781391Z #18 1.603   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.2781788Z #18 1.630 Collecting itsdangerous>=2.2.0 (from Flask<4,>=3.0->-r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.2782174Z #18 1.646   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.4118561Z #18 1.679 Collecting jinja2>=3.1.2 (from Flask<4,>=3.0->-r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.4119007Z #18 1.696   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.4119354Z #18 1.780 Collecting markupsafe>=2.1.1 (from Flask<4,>=3.0->-r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.5186148Z #18 ...
+checks	Run docker compose build	2026-10-30T15:08:23.5186367Z 
+checks	Run docker compose build	2026-10-30T15:08:23.5186497Z #21 [api] exporting to image
+checks	Run docker compose build	2026-10-30T15:08:23.5187180Z #21 exporting layers 0.5s done
+checks	Run docker compose build	2026-10-30T15:08:23.5187522Z #21 writing image sha256:6b13c98b8b38b33b7ab08547b8a685bd2002406562813ddd25f78bd2f8ffa291 done
+checks	Run docker compose build	2026-10-30T15:08:23.5188103Z #21 naming to docker.io/library/xrwvm-fullstack_developer_capstone-api done
+checks	Run docker compose build	2026-10-30T15:08:23.5188348Z #21 DONE 0.5s
+checks	Run docker compose build	2026-10-30T15:08:23.5188419Z 
+checks	Run docker compose build	2026-10-30T15:08:23.5188529Z #22 [api] resolving provenance for metadata file
+checks	Run docker compose build	2026-10-30T15:08:23.5188698Z #22 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:23.5188767Z 
+checks	Run docker compose build	2026-10-30T15:08:23.5188919Z #18 [sentiment 4/6] RUN pip install --no-cache-dir -r requirements.txt
+checks	Run docker compose build	2026-10-30T15:08:23.5189401Z #18 1.796   Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.5189859Z #18 1.828 Collecting werkzeug>=3.1.0 (from Flask<4,>=3.0->-r requirements.txt (line 1))
+checks	Run docker compose build	2026-10-30T15:08:23.5190187Z #18 1.843   Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.5190513Z #18 1.872 Collecting defusedxml (from nltk<4,>=3.8->-r requirements.txt (line 2))
+checks	Run docker compose build	2026-10-30T15:08:23.5190985Z #18 1.887   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.7220417Z #18 1.925 Collecting joblib (from nltk<4,>=3.8->-r requirements.txt (line 2))
+checks	Run docker compose build	2026-10-30T15:08:23.7221148Z #18 1.940   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+checks	Run docker compose build	2026-10-30T15:08:23.8791214Z #18 2.247 Collecting regex>=2021.8.3 (from nltk<4,>=3.8->-r requirements.txt (line 2))
+checks	Run docker compose build	2026-10-30T15:08:24.0039067Z #18 2.263   Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.0040320Z #18 2.267      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.6/40.6 kB 12.9 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.0040841Z #18 2.311 Collecting tqdm (from nltk<4,>=3.8->-r requirements.txt (line 2))
+checks	Run docker compose build	2026-10-30T15:08:24.0041362Z #18 2.326   Downloading tqdm-4.70.1-py3-none-any.whl.metadata (57 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.0041995Z #18 2.331      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/57.4 kB 10.6 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.0042500Z #18 2.372 Collecting cloudpickle>=3.0 (from joblib->nltk<4,>=3.8->-r requirements.txt (line 2))
+checks	Run docker compose build	2026-10-30T15:08:24.1044047Z #18 2.387   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.1045023Z #18 2.409 Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.1046166Z #18 2.415    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.4/103.4 kB 19.9 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.1046631Z #18 2.430 Downloading nltk-3.10.4-py3-none-any.whl (1.7 MB)
+checks	Run docker compose build	2026-10-30T15:08:24.2166987Z #18 2.472    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 41.7 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.2167588Z #18 2.488 Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.2168135Z #18 2.503 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.2168685Z #18 2.504    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.3/125.3 kB 602.3 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.2169198Z #18 2.519 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.2169475Z #18 2.534 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.2169809Z #18 2.536    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 513.1 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.2170267Z #18 2.551 Downloading markupsafe-3.0.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.2170804Z #18 2.566 Downloading regex-2026.9.29-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (804 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.2171262Z #18 2.570    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 805.0/805.0 kB 521.8 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.2171538Z #18 2.585 Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.3781078Z #18 2.587    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.7/228.7 kB 585.0 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.3781485Z #18 2.602 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.3782231Z #18 2.617 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.3782590Z #18 2.619    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 306.1/306.1 kB 621.5 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.3782861Z #18 2.634 Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.3783208Z #18 2.635    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 561.1 MB/s eta 0:00:00
+checks	Run docker compose build	2026-10-30T15:08:24.3783488Z #18 2.650 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+checks	Run docker compose build	2026-10-30T15:08:24.3783991Z #18 2.746 Installing collected packages: tqdm, regex, markupsafe, itsdangerous, defusedxml, cloudpickle, click, blinker, werkzeug, joblib, jinja2, nltk, Flask
+checks	Run docker compose build	2026-10-30T15:08:25.2742294Z #18 3.642 Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.0 cloudpickle-3.1.2 defusedxml-0.7.1 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.6.0 markupsafe-3.0.4 nltk-3.10.4 regex-2026.9.29 tqdm-4.70.1 werkzeug-3.1.9
+checks	Run docker compose build	2026-10-30T15:08:25.4981984Z #18 3.642 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+checks	Run docker compose build	2026-10-30T15:08:25.4983063Z #18 3.716 
+checks	Run docker compose build	2026-10-30T15:08:25.4983438Z #18 3.716 [notice] A new release of pip is available: 24.0 -> 26.2.2
+checks	Run docker compose build	2026-10-30T15:08:25.4983864Z #18 3.716 [notice] To update, run: pip install --upgrade pip
+checks	Run docker compose build	2026-10-30T15:08:25.7074568Z #18 DONE 4.1s
+checks	Run docker compose build	2026-10-30T15:08:25.8752591Z 
+checks	Run docker compose build	2026-10-30T15:08:25.8753384Z #23 [sentiment 5/6] COPY app.py ./
+checks	Run docker compose build	2026-10-30T15:08:25.8753721Z #23 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:25.8753836Z 
+checks	Run docker compose build	2026-10-30T15:08:25.8753994Z #24 [sentiment 6/6] COPY sentiment ./sentiment
+checks	Run docker compose build	2026-10-30T15:08:25.8754253Z #24 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:25.8754358Z 
+checks	Run docker compose build	2026-10-30T15:08:25.8754480Z #25 [sentiment] exporting to image
+checks	Run docker compose build	2026-10-30T15:08:26.2130823Z #25 exporting layers 0.5s done
+checks	Run docker compose build	2026-10-30T15:08:26.2356134Z #25 writing image sha256:d5466e863f765e49a653d08d2223e24c75777fdb7352da0b843eba850415a0ca done
+checks	Run docker compose build	2026-10-30T15:08:26.2356756Z #25 naming to docker.io/library/xrwvm-fullstack_developer_capstone-sentiment done
+checks	Run docker compose build	2026-10-30T15:08:26.2356991Z #25 DONE 0.5s
+checks	Run docker compose build	2026-10-30T15:08:26.2357073Z 
+checks	Run docker compose build	2026-10-30T15:08:26.2357199Z #26 [sentiment] resolving provenance for metadata file
+checks	Run docker compose build	2026-10-30T15:08:26.2357816Z #26 DONE 0.0s
+checks	Run docker compose build	2026-10-30T15:08:26.2358189Z  api  Built
+checks	Run docker compose build	2026-10-30T15:08:26.2358385Z  sentiment  Built
+checks	Post Run actions/setup-node@v4	﻿2026-10-30T15:08:26.2517579Z Post job cleanup.
+checks	Post Run actions/setup-node@v4	2026-10-30T15:08:26.3366558Z (node:2563) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks	Post Run actions/setup-node@v4	2026-10-30T15:08:26.3367075Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks	Post Run actions/setup-python@v5	﻿2026-10-30T15:08:26.3475464Z Post job cleanup.
+checks	Post Run actions/setup-python@v5	2026-10-30T15:08:26.4328794Z (node:2571) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+checks	Post Run actions/setup-python@v5	2026-10-30T15:08:26.4329595Z (Use `node --trace-deprecation ...` to show where the warning was created)
+checks	Post Run actions/checkout@v4	﻿2026-10-30T15:08:26.4479310Z Post job cleanup.
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5075252Z [command]/usr/bin/git version
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5139312Z git version 2.56.0
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5167335Z Temporarily overriding HOME='/home/runner/work/_temp/9fbaea9b-1b6b-4661-abaf-dd9f853dd51c' before making global git config changes
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5172338Z Adding repository directory to the temporary git global config as a safe directory
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5174205Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/xrwvm-fullstack_developer_capstone/xrwvm-fullstack_developer_capstone
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5220383Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5254984Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5480374Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5510482Z http.https://github.com/.extraheader
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5521620Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5558069Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5782137Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+checks	Post Run actions/checkout@v4	2026-10-30T15:08:26.5822427Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+checks	Complete job	﻿2026-10-30T15:08:26.6168148Z Cleaning up orphan processes
+checks	Complete job	2026-10-30T15:08:26.6426479Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
