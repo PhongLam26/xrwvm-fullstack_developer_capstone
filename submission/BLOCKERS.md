@@ -1,5 +1,7 @@
-# Remaining work
+# Remaining scope
 
-IBM Cloud CLI is absent. IBM account authentication, Code Engine project, persistent production databases and quota/cost authorization have not been established. Tasks 24–28 remain blocked.
+Q1–Q22 are verified. Q23–Q27 (Tasks 24–28) are intentionally omitted at the user's explicit request on 2026-10-30: “chắc bỏ mấy câu IBM đi”. They remain BLOCKED and are not counted as complete.
 
-Local admin login/logout screenshots and complete browser review flow screenshots are still pending verification. GitHub Actions result is pending until the pushed workflow finishes. The provided request does not include individual task scoring weights, so a verified rubric point total cannot be calculated reliably.
+No IBM Cloud resources, public deployment URL, or deployed screenshots were created. IBM CLI was not found on PATH; the existing .bluemix configuration has no IAM token or refresh token. No alternative hosting platform is represented as IBM Cloud.
+
+No other blockers remain for Q1–Q22. This is not an official grade; rubric point weights were not supplied.

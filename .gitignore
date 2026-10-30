@@ -133,3 +133,8 @@ node_modules/
 !.env.example
 .local-secrets.json
 submission/evidence/private/
+
+submission/evidence/private-response.txt
+submission/evidence/text/django*_errors*.txt
+submission/evidence/text/django_server_8010.txt
+submission/evidence/text/django_errors_8010.txt

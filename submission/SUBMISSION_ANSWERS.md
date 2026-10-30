@@ -1,6 +1,6 @@
 # Submission answers — 27 questions
 
-Public source URLs require verification after push. Missing evidence is explicitly marked BLOCKED.
+Q1–Q22 have verified evidence. Q23–Q27 (IBM deployment) were omitted at the user's explicit request on 2026-10-30 and remain BLOCKED. This is 22/27 questions and 23/28 tasks; no official grade is claimed. Public source files were verified through GitHub API.
 
 
 ## Q1
@@ -69,11 +69,13 @@ Exit code: 0
 
 ## Q12
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\admin_login.png
 
 ## Q13
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\admin_logout.png
 
 ## Q14
 
@@ -89,48 +91,81 @@ Exit code: 0
 
 ## Q16
 
+
 C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\get_dealers.png
 
 ## Q17
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\get_dealers_loggedin.png
 
 ## Q18
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\dealersbystate.png
 
 ## Q19
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\dealer_id_reviews.png
 
 ## Q20
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\dealership_review_submission.png
 
 ## Q21
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\added_review.png
 
 ## Q22
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+```text
+Command: gh run view 41074907036 --repo PhongLam26/xrwvm-fullstack_developer_capstone
+
+✓ main Capstone CI · 41074907036
+Triggered via push about 17 minutes ago
+
+JOBS
+✓ checks in 3m15s (ID 124128379499)
+
+ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+checks: .github#2
+
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+checks: .github#1
+
+
+For more information about the job, try: gh run view --job=124128379499
+View this run on GitHub: https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/actions/runs/41074907036
+```
+
+Full runner log: `evidence/text/CICD-full.txt`.
 
 ## Q23
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
 
 ## Q24
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
 
 ## Q25
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
 
 ## Q26
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
 
 ## Q27
 
-BLOCKED — evidence not yet verified. See BLOCKERS.md.
+
+BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.

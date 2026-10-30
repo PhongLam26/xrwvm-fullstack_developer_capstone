@@ -1,5 +1,16 @@
 name: Capstone CI
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - 'submission/**'
+      - '**/*.md'
+      - '.gitignore'
+  pull_request:
+    paths-ignore:
+      - 'submission/**'
+      - '**/*.md'
+      - '.gitignore'
+  workflow_dispatch:
 jobs:
   checks:
     runs-on: ubuntu-latest

@@ -47,4 +47,17 @@ Destroying test database for alias 'default' ('file:memorydb_default?mode=memory
 
 
 
-React production build: passed. Docker API and sentiment images built; MongoDB seeded 50 dealers and 51 reviews. Curl evidence is in evidence/text. Full browser flow and cloud verification pending.
+React production build: passed. Docker API and sentiment images built; MongoDB seeded 50 dealers and 51 reviews. Curl evidence is in evidence/text. Browser review and admin flows are now verified below. Cloud deployment omitted at user request.
+
+
+## Final verification — 2026-10-30, Asia/Saigon
+
+- Django system check: passed. `python manage.py check`.
+- Latest Django suite: **9 tests passed** with `python manage.py test --verbosity 2`. Actual output: `evidence/text/django_tests.txt`. Includes admin username/root display and logout protection, authentication, CSRF, registration duplicates/password hashing, catalog, dealer filtering, missing dealer 404, service failure 502 and authenticated review attribution. Service boundaries in unit tests are mocked.
+- Real browser: Chrome window captured through Computer Use, including its actual address bar. All eight requested local screenshots exist and were visually inspected.
+- Admin: logged in with existing root credentials; dashboard shows ROOT. Logged out through the POST form; reopening /admin/ shows the login page. No password is committed.
+- Real review flow: entered review/date/car/year in React form, saved the pre-submit screenshot, submitted through Django/Express, then reloaded the detail page. Review ID 52 is persisted for dealer 8, attributed to Demo Driver and classified positive. Backend GET independently confirms it: `evidence/text/added_review_backend`.
+- Previously captured Q17/Q18 screenshots were visually verified: signed-in user and Review Dealer links are visible; Kansas filter shows dealer 8 and the correct URL.
+- GitHub repository is PUBLIC on main. Required README/About/Contact/Register files verified through GitHub contents API.
+- CI: real successful runner output and all job steps saved in `evidence/text/CICD`, `CICD-run.json` and `CICD-full.txt`. The final source commit is rechecked before handoff.
+- IBM deployment: excluded at user request; no production result is claimed.

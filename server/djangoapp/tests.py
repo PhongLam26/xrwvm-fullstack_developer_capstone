@@ -1,4 +1,5 @@
 import json
+import requests
 from unittest.mock import patch
 from django.test import TestCase, Client
 from django.contrib.auth.models import User
@@ -6,6 +7,28 @@ from .populate import initiate
 from .models import CarMake, CarModel
 
 class AuthenticationTests(TestCase):
+    def test_admin_username_and_logout_protection(self):
+        user = User.objects.create_superuser(
+            'root', 'admin@example.com', 'Local-test-admin-238!', first_name='Demo'
+        )
+        self.client.force_login(user)
+        response = self.client.get('/admin/')
+        self.assertContains(response, '<strong>root</strong>', html=True)
+        self.assertEqual(self.client.post('/admin/logout/').status_code, 200)
+        self.assertRedirects(
+            self.client.get('/admin/'), '/admin/login/?next=/admin/'
+        )
+
+    @patch('djangoapp.restapis.get_request')
+    def test_missing_dealer_returns_404(self, get):
+        get.return_value = []
+        self.assertEqual(self.client.get('/djangoapp/dealer/999999').status_code, 404)
+
+    @patch('djangoapp.restapis.get_request')
+    def test_unavailable_backend_returns_502(self, get):
+        get.side_effect = requests.ConnectionError('Service unavailable')
+        self.assertEqual(self.client.get('/djangoapp/get_dealers').status_code, 502)
+
     def post(self,path,data):
         return self.client.post("/djangoapp/"+path,json.dumps(data),content_type="application/json")
     def test_registration_duplicate_and_password_hash(self):
