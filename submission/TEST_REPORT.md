@@ -62,3 +62,9 @@ React production build: passed. Docker API and sentiment images built; MongoDB s
 - GitHub repository is PUBLIC on main. Required README/About/Contact/Register files verified through GitHub contents API.
 - CI: real successful runner output and all job steps saved in `evidence/text/CICD`, `CICD-run.json` and `CICD-full.txt`. Latest source commit `ff1e55641e0488e6821fc91040e42f95ee6e23b6` passed: https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/actions/runs/41077796961. Evidence-only commits do not trigger redundant builds.
 - IBM deployment: excluded at user request; no production result is claimed.
+
+## IBM and grading-feedback update
+
+10 Django tests passed, including CSRF-protected legacy GET logout. Python flake8 and JavaScript JSHint passed in separate real GitHub Actions jobs in run 41084078460; checks and Docker images also passed. Source commit bb49408. Both lint job steps and IDs appear in evidence/text/CICD, with full logs in CICD-full.txt.
+
+IBM Code Engine homepage, authentication, APIs and review storage/reload verified. Four deployment screenshots captured from Chrome with genuine browser chrome. See cloud_verification.json. Production durability across container replacement remains incomplete. Previous assessment: 29/50; updated submission not graded.

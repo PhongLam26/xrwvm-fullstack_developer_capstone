@@ -1,7 +1,7 @@
-# Remaining scope
+# Remaining limitations
 
-Q1–Q22 are verified. Q23–Q27 (Tasks 24–28) are intentionally omitted at the user's explicit request on 2026-10-30: “chắc bỏ mấy câu IBM đi”. They remain BLOCKED and are not counted as complete.
+The previously excluded IBM work has been resumed and real deployment URL plus four screenshots are available. All 27 question slots are populated.
 
-No IBM Cloud resources, public deployment URL, or deployed screenshots were created. IBM CLI was not found on PATH; the existing .bluemix configuration has no IAM token or refresh token. No alternative hosting platform is represented as IBM Cloud.
+Durable production storage remains incomplete: SQLite and MongoDB use container-local data. Review survives page reload; persistence across container replacement is not verified. Skills Network lab resources may expire.
 
-No other blockers remain for Q1–Q22. This is not an official grade; rubric point weights were not supplied.
+Previous graded result: 29/50 (58%). Updated submission is not graded. No passing score is guaranteed. Q2/Q3/Q4/Q5/Q6/Q7/Q14/Q22 were updated against the supplied feedback. Q5 masks the valid password in public evidence.

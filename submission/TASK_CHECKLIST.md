@@ -1,6 +1,6 @@
 # Task checklist
 
-Verified on 2026-10-30 (Asia/Saigon). **23/28 tasks verified = 22/27 questions.** Tasks 14 and 15 share Q14. Five IBM deployment tasks are omitted by the user's explicit instruction and remain BLOCKED. Official grading and per-task score weights are unavailable.
+Updated after the graded 29/50 attempt. All 27 question slots now have real evidence; production persistence is still incomplete. No new grade is claimed.
 
 |Task|Requirement|Status|Source|Evidence|Verification / notes|
 |---|---|---|---|---|---|
@@ -27,8 +27,8 @@ Verified on 2026-10-30 (Asia/Saigon). **23/28 tasks verified = 22/27 questions.*
 |21|Filled review form|COMPLETE_VERIFIED|`server/frontend/src/components/Dealers/PostReview.jsx`|evidence/screenshots/dealership_review_submission.png|All fields filled before submit|
 |22|Posted review|COMPLETE_VERIFIED|`server/frontend/src/components/Dealers/PostReview.jsx`|evidence/screenshots/added_review.png|Submitted in browser; review 52 verified via backend and reload|
 |23|GitHub Actions|COMPLETE_VERIFIED|`.github/workflows/ci.yml`|evidence/text/CICD|Real successful GitHub Actions run; full log saved|
-|24|Deployment URL|BLOCKED|See DEPLOYMENT_REPORT.md|No fabricated evidence|Omitted at user request; no cloud deployment|
-|25|Deployed landing|BLOCKED|See DEPLOYMENT_REPORT.md|No fabricated evidence|Omitted at user request; no cloud deployment|
-|26|Deployed login|BLOCKED|See DEPLOYMENT_REPORT.md|No fabricated evidence|Omitted at user request; no cloud deployment|
-|27|Deployed detail|BLOCKED|See DEPLOYMENT_REPORT.md|No fabricated evidence|Omitted at user request; no cloud deployment|
-|28|Deployed review|BLOCKED|See DEPLOYMENT_REPORT.md|No fabricated evidence|Omitted at user request; no cloud deployment|
+|24|Deployment URL|IMPLEMENTED_NOT_VERIFIED|Dockerfile / Code Engine|See DEPLOYMENT_REPORT.md and Q23|Live deployment verified; container replacement persistence incomplete|
+|25|Deployed landing|COMPLETE_VERIFIED|Dockerfile / Code Engine|See DEPLOYMENT_REPORT.md and Q24|Live deployment verified; container replacement persistence incomplete|
+|26|Deployed login|COMPLETE_VERIFIED|Dockerfile / Code Engine|See DEPLOYMENT_REPORT.md and Q25|Live deployment verified; container replacement persistence incomplete|
+|27|Deployed detail|COMPLETE_VERIFIED|Dockerfile / Code Engine|See DEPLOYMENT_REPORT.md and Q26|Live deployment verified; container replacement persistence incomplete|
+|28|Deployed review|COMPLETE_VERIFIED|Dockerfile / Code Engine|See DEPLOYMENT_REPORT.md and Q27|Live deployment verified; container replacement persistence incomplete|

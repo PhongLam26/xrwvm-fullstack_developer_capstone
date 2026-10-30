@@ -39,8 +39,7 @@ MongoDB uses a named volume; seed runs only on empty collections and preserves p
 SQLite is local and excluded from Git.
 
 ## Deployment
-IBM Cloud deployment was omitted at the user's request. No public deployment URL is claimed. Q1–Q22 have verified evidence; Q23–Q27 remain incomplete. See submission/SUBMISSION_ANSWERS.md.
-Production needs DJANGO_DEBUG=false, DJANGO_SECRET_KEY, DJANGO_ALLOWED_HOSTS, DJANGO_CSRF_TRUSTED_ORIGINS, BACKEND_URL, SENTIMENT_ANALYZER_URL, persistent databases and static-file serving configuration.
+IBM Code Engine educational deployment: https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud. Homepage, login, dealer APIs and persisted review after reload verified. Container-local SQLite/MongoDB do not yet provide durability across replacement; lab URL can expire. See submission/DEPLOYMENT_REPORT.md.
 
 ## Attribution
 Based on ibm-developer-skills-network/xrwvm-fullstack_developer_capstone.

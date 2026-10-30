@@ -1,0 +1,57 @@
+{
+  "url": "https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud",
+  "login_status": 200,
+  "post_review_status": 201,
+  "posted_review": {
+    "status": 201,
+    "review": {
+      "id": 52,
+      "name": "Demo Driver",
+      "dealership": 8,
+      "review": "Fantastic services on IBM Cloud. The Kansas team made my Toyota purchase easy. Cloud capstone verification 2026-10-30.",
+      "purchase": true,
+      "purchase_date": "2026-10-30",
+      "car_make": "Toyota",
+      "car_model": "Camry",
+      "car_year": 2022,
+      "sentiment": "positive",
+      "_id": "6ae4bdac2b4a78ed3b20c347",
+      "__v": 0
+    },
+    "sentiment": "positive"
+  },
+  "independent_get": {
+    "status": 200,
+    "reviews": [
+      {
+        "_id": "6ae4bcd12b4a78ed3b20c33e",
+        "id": 51,
+        "name": "Capstone Demo Reviewer",
+        "dealership": 8,
+        "review": "Friendly team and a smooth, helpful buying experience.",
+        "purchase": true,
+        "purchase_date": "2024-06-15",
+        "car_make": "Toyota",
+        "car_model": "Camry",
+        "car_year": 2022,
+        "sentiment": "positive",
+        "__v": 0
+      },
+      {
+        "_id": "6ae4bdac2b4a78ed3b20c347",
+        "id": 52,
+        "name": "Demo Driver",
+        "dealership": 8,
+        "review": "Fantastic services on IBM Cloud. The Kansas team made my Toyota purchase easy. Cloud capstone verification 2026-10-30.",
+        "purchase": true,
+        "purchase_date": "2026-10-30",
+        "car_make": "Toyota",
+        "car_model": "Camry",
+        "car_year": 2022,
+        "sentiment": "positive",
+        "__v": 0
+      }
+    ]
+  },
+  "verification": "Real HTTPS requests; review retrieved independently after POST."
+}

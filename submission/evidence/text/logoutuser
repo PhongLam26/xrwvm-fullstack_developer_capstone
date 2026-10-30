@@ -1,2 +1,3 @@
-$ curl.exe -X POST -b $cookieJar -H "X-CSRFToken: $csrf" http://127.0.0.1:8010/djangoapp/logout
-{"status": 200, "message": "Logged out."}
+$ curl.exe -s -X GET -b $cookieJar -c $cookieJar -H "Referer: https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud/" -H "X-CSRFToken: $csrf" -H "Content-Type: application/json" https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud/djangoapp/logout
+{"userName": "", "status": 200, "message": "Logged out."}
+Password and session values redacted.

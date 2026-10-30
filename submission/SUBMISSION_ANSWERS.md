@@ -1,6 +1,6 @@
 # Submission answers — 27 questions
 
-Q1–Q22 have verified evidence. Q23–Q27 (IBM deployment) were omitted at the user's explicit request on 2026-10-30 and remain BLOCKED. This is 22/27 questions and 23/28 tasks; no official grade is claimed. Public source files were verified through GitHub API.
+All 27 answer slots now have real evidence. IBM Code Engine is running in the Skills Network lab. Data survives page reloads; durability across container replacement is not established. Prior grading attempt: 29/50. The updated submission has not been graded.
 
 
 ## Q1
@@ -9,10 +9,14 @@ https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/blob/main/READM
 
 ## Q2
 
+
+
+```text
+PS> .venv\Scripts\python.exe -u server/manage.py runserver 127.0.0.1:8010 --noreload
 Performing system checks...
 
 System check identified no issues (0 silenced).
-October 30, 2026 - 21:46:34
+October 30, 2026 - 22:04:40
 Django version 5.2.18, using settings 'djangoproj.settings'
 Starting development server at http://127.0.0.1:8010/
 Quit the server with CTRL-BREAK.
@@ -20,6 +24,7 @@ Quit the server with CTRL-BREAK.
 WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
 For more information on production servers see: https://docs.djangoproject.com/en/5.2/howto/deployment/
 
+```
 
 ## Q3
 
@@ -31,13 +36,23 @@ https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/blob/main/serve
 
 ## Q5
 
-$ curl.exe -b $cookieJar -c $cookieJar -H "X-CSRFToken: $csrf" -H "Content-Type: application/json" --data-binary "@$privateLoginFile" http://127.0.0.1:8010/djangoapp/login
-{"status": "Authenticated", "userName": "capstone_reviewer", "firstName": "Demo", "lastName": "Driver"}
+
+```text
+$ curl.exe -s -X POST -b $cookieJar -c $cookieJar -H "Referer: https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud/" -H "X-CSRFToken: $csrf" -H "Content-Type: application/json" --data-raw "{\"userName\": \"capstone_cloud\", \"password\": \"<REDACTED_VALID_TEST_PASSWORD>\"}" https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud/djangoapp/login
+{"status": "Authenticated", "userName": "capstone_cloud", "firstName": "Demo", "lastName": "Driver"}
+Password and session values redacted.
+
+```
 
 ## Q6
 
-$ curl.exe -X POST -b $cookieJar -H "X-CSRFToken: $csrf" http://127.0.0.1:8010/djangoapp/logout
-{"status": 200, "message": "Logged out."}
+
+```text
+$ curl.exe -s -X GET -b $cookieJar -c $cookieJar -H "Referer: https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud/" -H "X-CSRFToken: $csrf" -H "Content-Type: application/json" https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud/djangoapp/logout
+{"userName": "", "status": 200, "message": "Logged out."}
+Password and session values redacted.
+
+```
 
 ## Q7
 
@@ -79,8 +94,14 @@ C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screen
 
 ## Q14
 
-$ curl.exe --silent --show-error --fail-with-body http://127.0.0.1:8010/djangoapp/get_carmakes
-{"status": 200, "CarMakes": [{"id": 3, "name": "Audi", "description": "Demo catalog entries for Audi vehicles."}, {"id": 2, "name": "Kia", "description": "Demo catalog entries for Kia vehicles."}, {"id": 4, "name": "Mercedes", "description": "Demo catalog entries for Mercedes vehicles."}, {"id": 1, "name": "Nissan", "description": "Demo catalog entries for Nissan vehicles."}, {"id": 5, "name": "Toyota", "description": "Demo catalog entries for Toyota vehicles."}], "CarModels": [{"id": 13, "name": "A3", "type": "Hatchback", "year": 2020, "car_make__name": "Audi"}, {"id": 89, "name": "A3", "type": "Hatchback", "year": 2022, "car_make__name": "Audi"}, {"id": 3, "name": "A4", "type": "Sedan", "year": 2021, "car_make__name": "Audi"}, {"id": 33, "name": "A5", "type": "Convertible", "year": 2020, "car_make__name": "Audi"}, {"id": 61, "name": "A5", "type": "Convertible", "year": 2021, "car_make__name": "Audi"}, {"id": 56, "name": "A6", "type": "Sedan", "year": 2022, "car_make__name": "Audi"}, {"id": 79, "name": "Q3", "type": "SUV", "year": 2020, "car_make__name": "Audi"}, {"id": 107, "name": "Q3", "type": "SUV", "year": 2022, "car_make__name": "Audi"}, {"id": 38, "name": "Q3", "type": "SUV", "year": 2023, "car_make__name": "Audi"}, {"id": 8, "name": "Q5", "type": "SUV", "year": 2020, "car_make__name": "Audi"}, {"id": 75, "name": "Q5", "type": "SUV", "year": 2022, "car_make__name": "Audi"}, {"id": 94, "name": "Q7", "type": "SUV", "year": 2021, "car_make__name": "Audi"}, {"id": 18, "name": "Q7", "type": "SUV", "year": 2023, "car_make__name": "Audi"}, {"id": 66, "name": "Q8", "type": "SUV", "year": 2020, "car_make__name": "Audi"}, {"id": 48, "name": "Q8", "type": "SUV", "year": 2021, "car_make__name": "Audi"}, {"id": 70, "name": "S3", "type": "Sedan", "year": 2023, "car_make__name": "Audi"}, {"id": 23, "name": "S5", "type": "Coupe", "year": 2022, "car_make__name": "Audi"}, {"id": 84, "name": "S5", "type": "Coupe", "year": 2023, "car_make__name": "Audi"}, {"id": 43, "name": "S7", "type": "Sedan", "year": 2022, "car_make__name": "Audi"}, {"id": 28, "name": "TT", "type": "Convertible", "year": 2021, "car_make__name": "Audi"}, {"id": 102, "name": "TT", "type": "Convertible", "year": 2023, "car_make__name": "Audi"}, {"id": 17, "name": "Cadenza", "type": "Sedan", "year": 2020, "car_make__name": "Kia"}, {"id": 93, "name": "Cadenza", "type": "Sedan", "year": 2022, "car_make__name": "Kia"}, {"id": 52, "name": "Forte", "type": "Sedan", "year": 2020, "car_make__name": "Kia"}, {"id": 47, "name": "Forte", "type": "Sedan", "year": 2022, "car_make__name": "Kia"}, {"id": 106, "name": "Forte", "type": "Sedan", "year": 2023, "car_make__name": "Kia"}, {"id": 37, "name": "Niro", "type": "SUV", "year": 2020, "car_make__name": "Kia"}, {"id": 55, "name": "Niro", "type": "SUV", "year": 2023, "car_make__name": "Kia"}, {"id": 83, "name": "Optima", "type": "Sedan", "year": 2020, "car_make__name": "Kia"}, {"id": 22, "name": "Optima", "type": "Sedan", "year": 2023, "car_make__name": "Kia"}, {"id": 27, "name": "Rio", "type": "Hatchback", "year": 2022, "car_make__name": "Kia"}, {"id": 74, "name": "Rio", "type": "Hatchback", "year": 2023, "car_make__name": "Kia"}, {"id": 2, "name": "Seltos", "type": "SUV", "year": 2022, "car_make__name": "Kia"}, {"id": 101, "name": "Soul", "type": "Hatchback", "year": 2020, "car_make__name": "Kia"}, {"id": 65, "name": "Soul", "type": "Hatchback", "year": 2021, "car_make__name": "Kia"}, {"id": 42, "name": "Soul", "type": "Hatchback", "year": 2023, "car_make__name": "Kia"}, {"id": 12, "name": "Sportage", "type": "SUV", "year": 2021, "car_make__name": "Kia"}, {"id": 88, "name": "Sportage", "type": "SUV", "year": 2023, "car_make__name": "Kia"}, {"id": 32, "name": "Stinger", "type": "Sedan", "year": 2021, "car_make__name": "Kia"}, {"id": 60, "name": "Stinger", "type": "Sedan", "year": 2022, "car_make__name": "Kia"}, {"id": 69, "name": "Telluride", "type": "SUV", "year": 2020, "car_make__name": "Kia"}, {"id": 7, "name": "Telluride", "type": "SUV", "year": 2021, "car_make__name": "Kia"}, {"id": 49, "name": "A-Class", "type": "Sedan", "year": 2020, "car_make__name": "Mercedes"}, {"id": 108, "name": "A-Class", "type": "Sedan", "year": 2021, "car_make__name": "Mercedes"}, {"id": 53, "name": "A-Class", "type": "Sedan", "year": 2022, "car_make__name": "Mercedes"}, {"id": 67, "name": "AMG GT", "type": "Coupe", "year": 2023, "car_make__name": "Mercedes"}, {"id": 76, "name": "C-Class", "type": "Sedan", "year": 2021, "car_make__name": "Mercedes"}, {"id": 9, "name": "C-Class", "type": "Sedan", "year": 2023, "car_make__name": "Mercedes"}, {"id": 29, "name": "CLA", "type": "Sedan", "year": 2020, "car_make__name": "Mercedes"}, {"id": 103, "name": "CLA", "type": "Sedan", "year": 2022, "car_make__name": "Mercedes"}, {"id": 90, "name": "E-Class", "type": "Sedan", "year": 2021, "car_make__name": "Mercedes"}, {"id": 14, "name": "E-Class", "type": "Sedan", "year": 2023, "car_make__name": "Mercedes"}, {"id": 57, "name": "GLA", "type": "SUV", "year": 2021, "car_make__name": "Mercedes"}, {"id": 34, "name": "GLA", "type": "SUV", "year": 2023, "car_make__name": "Mercedes"}, {"id": 44, "name": "GLB", "type": "SUV", "year": 2021, "car_make__name": "Mercedes"}, {"id": 95, "name": "GLC", "type": "SUV", "year": 2020, "car_make__name": "Mercedes"}, {"id": 19, "name": "GLC", "type": "SUV", "year": 2022, "car_make__name": "Mercedes"}, {"id": 80, "name": "GLC", "type": "SUV", "year": 2023, "car_make__name": "Mercedes"}, {"id": 4, "name": "GLE", "type": "SUV", "year": 2020, "car_make__name": "Mercedes"}, {"id": 39, "name": "GLE Coupe", "type": "SUV", "year": 2022, "car_make__name": "Mercedes"}, {"id": 62, "name": "GLS", "type": "SUV", "year": 2020, "car_make__name": "Mercedes"}, {"id": 98, "name": "GLS", "type": "SUV", "year": 2023, "car_make__name": "Mercedes"}, {"id": 71, "name": "M-Class", "type": "SUV", "year": 2022, "car_make__name": "Mercedes"}, {"id": 24, "name": "S-Class", "type": "Sedan", "year": 2021, "car_make__name": "Mercedes"}, {"id": 85, "name": "S-Class", "type": "Sedan", "year": 2022, "car_make__name": "Mercedes"}, {"id": 73, "name": "370Z", "type": "Coupe", "year": 2020, "car_make__name": "Nissan"}, {"id": 26, "name": "370Z", "type": "Coupe", "year": 2023, "car_make__name": "Nissan"}, {"id": 87, "name": "Altima", "type": "Sedan", "year": 2020, "car_make__name": "Nissan"}, {"id": 11, "name": "Altima", "type": "Sedan", "year": 2022, "car_make__name": "Nissan"}, {"id": 36, "name": "Armada", "type": "SUV", "year": 2021, "car_make__name": "Nissan"}, {"id": 110, "name": "Armada", "type": "SUV", "year": 2022, "car_make__name": "Nissan"}, {"id": 97, "name": "Cube", "type": "Hatchback", "year": 2022, "car_make__name": "Nissan"}, {"id": 59, "name": "Cube", "type": "Hatchback", "year": 2023, "car_make__name": "Nissan"}, {"id": 100, "name": "Juke", "type": "SUV", "year": 2021, "car_make__name": "Nissan"}, {"id": 64, "name": "Juke", "type": "SUV", "year": 2022, "car_make__name": "Nissan"}, {"id": 46, "name": "Juke", "type": "SUV", "year": 2023, "car_make__name": "Nissan"}, {"id": 16, "name": "Maxima", "type": "Sedan", "year": 2021, "car_make__name": "Nissan"}, {"id": 92, "name": "Maxima", "type": "Sedan", "year": 2023, "car_make__name": "Nissan"}, {"id": 21, "name": "Murano", "type": "SUV", "year": 2020, "car_make__name": "Nissan"}, {"id": 82, "name": "Murano", "type": "SUV", "year": 2021, "car_make__name": "Nissan"}, {"id": 1, "name": "Pathfinder", "type": "SUV", "year": 2023, "car_make__name": "Nissan"}, {"id": 6, "name": "Rogue", "type": "SUV", "year": 2022, "car_make__name": "Nissan"}, {"id": 41, "name": "Sentra", "type": "Sedan", "year": 2020, "car_make__name": "Nissan"}, {"id": 105, "name": "Versa", "type": "Sedan", "year": 2020, "car_make__name": "Nissan"}, {"id": 51, "name": "Versa", "type": "Sedan", "year": 2021, "car_make__name": "Nissan"}, {"id": 31, "name": "Versa", "type": "Sedan", "year": 2022, "car_make__name": "Nissan"}, {"id": 78, "name": "Versa", "type": "Sedan", "year": 2023, "car_make__name": "Nissan"}, {"id": 45, "name": "4Runner", "type": "SUV", "year": 2020, "car_make__name": "Toyota"}, {"id": 99, "name": "4Runner", "type": "SUV", "year": 2022, "car_make__name": "Toyota"}, {"id": 63, "name": "4Runner", "type": "SUV", "year": 2023, "car_make__name": "Toyota"}, {"id": 40, "name": "Avalon", "type": "Sedan", "year": 2021, "car_make__name": "Toyota"}, {"id": 68, "name": "Avalon", "type": "Sedan", "year": 2022, "car_make__name": "Toyota"}, {"id": 5, "name": "Camry", "type": "Sedan", "year": 2023, "car_make__name": "Toyota"}, {"id": 20, "name": "Corolla", "type": "Sedan", "year": 2021, "car_make__name": "Toyota"}, {"id": 81, "name": "Corolla", "type": "Sedan", "year": 2022, "car_make__name": "Toyota"}, {"id": 77, "name": "Highlander", "type": "SUV", "year": 2020, "car_make__name": "Toyota"}, {"id": 10, "name": "Highlander", "type": "SUV", "year": 2022, "car_make__name": "Toyota"}, {"id": 72, "name": "Land Cruiser", "type": "SUV", "year": 2021, "car_make__name": "Toyota"}, {"id": 109, "name": "Prius", "type": "Hatchback", "year": 2020, "car_make__name": "Toyota"}, {"id": 54, "name": "Prius", "type": "Hatchback", "year": 2021, "car_make__name": "Toyota"}, {"id": 35, "name": "Prius", "type": "Hatchback", "year": 2022, "car_make__name": "Toyota"}, {"id": 91, "name": "RAV4", "type": "SUV", "year": 2020, "car_make__name": "Toyota"}, {"id": 15, "name": "RAV4", "type": "SUV", "year": 2022, "car_make__name": "Toyota"}, {"id": 25, "name": "Sienna", "type": "Minivan", "year": 2020, "car_make__name": "Toyota"}, {"id": 86, "name": "Sienna", "type": "Minivan", "year": 2021, "car_make__name": "Toyota"}, {"id": 104, "name": "Tacoma", "type": "Pickup", "year": 2021, "car_make__name": "Toyota"}, {"id": 30, "name": "Tacoma", "type": "Pickup", "year": 2023, "car_make__name": "Toyota"}, {"id": 50, "name": "Tundra", "type": "Pickup", "year": 2023, "car_make__name": "Toyota"}, {"id": 58, "name": "Yaris", "type": "Hatchback", "year": 2020, "car_make__name": "Toyota"}, {"id": 96, "name": "Yaris", "type": "Hatchback", "year": 2023, "car_make__name": "Toyota"}]}
+
+
+```text
+$ curl.exe --silent --show-error --fail-with-body http://127.0.0.1:8010/djangoapp/get_cars
+{"status": 200, "CarModels": [{"id": 13, "CarMake": "Audi", "CarModel": "A3", "type": "Hatchback", "year": 2020}, {"id": 89, "CarMake": "Audi", "CarModel": "A3", "type": "Hatchback", "year": 2022}, {"id": 3, "CarMake": "Audi", "CarModel": "A4", "type": "Sedan", "year": 2021}, {"id": 33, "CarMake": "Audi", "CarModel": "A5", "type": "Convertible", "year": 2020}, {"id": 61, "CarMake": "Audi", "CarModel": "A5", "type": "Convertible", "year": 2021}, {"id": 56, "CarMake": "Audi", "CarModel": "A6", "type": "Sedan", "year": 2022}, {"id": 79, "CarMake": "Audi", "CarModel": "Q3", "type": "SUV", "year": 2020}, {"id": 107, "CarMake": "Audi", "CarModel": "Q3", "type": "SUV", "year": 2022}, {"id": 38, "CarMake": "Audi", "CarModel": "Q3", "type": "SUV", "year": 2023}, {"id": 8, "CarMake": "Audi", "CarModel": "Q5", "type": "SUV", "year": 2020}, {"id": 75, "CarMake": "Audi", "CarModel": "Q5", "type": "SUV", "year": 2022}, {"id": 94, "CarMake": "Audi", "CarModel": "Q7", "type": "SUV", "year": 2021}, {"id": 18, "CarMake": "Audi", "CarModel": "Q7", "type": "SUV", "year": 2023}, {"id": 66, "CarMake": "Audi", "CarModel": "Q8", "type": "SUV", "year": 2020}, {"id": 48, "CarMake": "Audi", "CarModel": "Q8", "type": "SUV", "year": 2021}, {"id": 70, "CarMake": "Audi", "CarModel": "S3", "type": "Sedan", "year": 2023}, {"id": 23, "CarMake": "Audi", "CarModel": "S5", "type": "Coupe", "year": 2022}, {"id": 84, "CarMake": "Audi", "CarModel": "S5", "type": "Coupe", "year": 2023}, {"id": 43, "CarMake": "Audi", "CarModel": "S7", "type": "Sedan", "year": 2022}, {"id": 28, "CarMake": "Audi", "CarModel": "TT", "type": "Convertible", "year": 2021}, {"id": 102, "CarMake": "Audi", "CarModel": "TT", "type": "Convertible", "year": 2023}, {"id": 17, "CarMake": "Kia", "CarModel": "Cadenza", "type": "Sedan", "year": 2020}, {"id": 93, "CarMake": "Kia", "CarModel": "Cadenza", "type": "Sedan", "year": 2022}, {"id": 52, "CarMake": "Kia", "CarModel": "Forte", "type": "Sedan", "year": 2020}, {"id": 47, "CarMake": "Kia", "CarModel": "Forte", "type": "Sedan", "year": 2022}, {"id": 106, "CarMake": "Kia", "CarModel": "Forte", "type": "Sedan", "year": 2023}, {"id": 37, "CarMake": "Kia", "CarModel": "Niro", "type": "SUV", "year": 2020}, {"id": 55, "CarMake": "Kia", "CarModel": "Niro", "type": "SUV", "year": 2023}, {"id": 83, "CarMake": "Kia", "CarModel": "Optima", "type": "Sedan", "year": 2020}, {"id": 22, "CarMake": "Kia", "CarModel": "Optima", "type": "Sedan", "year": 2023}, {"id": 27, "CarMake": "Kia", "CarModel": "Rio", "type": "Hatchback", "year": 2022}, {"id": 74, "CarMake": "Kia", "CarModel": "Rio", "type": "Hatchback", "year": 2023}, {"id": 2, "CarMake": "Kia", "CarModel": "Seltos", "type": "SUV", "year": 2022}, {"id": 101, "CarMake": "Kia", "CarModel": "Soul", "type": "Hatchback", "year": 2020}, {"id": 65, "CarMake": "Kia", "CarModel": "Soul", "type": "Hatchback", "year": 2021}, {"id": 42, "CarMake": "Kia", "CarModel": "Soul", "type": "Hatchback", "year": 2023}, {"id": 12, "CarMake": "Kia", "CarModel": "Sportage", "type": "SUV", "year": 2021}, {"id": 88, "CarMake": "Kia", "CarModel": "Sportage", "type": "SUV", "year": 2023}, {"id": 32, "CarMake": "Kia", "CarModel": "Stinger", "type": "Sedan", "year": 2021}, {"id": 60, "CarMake": "Kia", "CarModel": "Stinger", "type": "Sedan", "year": 2022}, {"id": 69, "CarMake": "Kia", "CarModel": "Telluride", "type": "SUV", "year": 2020}, {"id": 7, "CarMake": "Kia", "CarModel": "Telluride", "type": "SUV", "year": 2021}, {"id": 49, "CarMake": "Mercedes", "CarModel": "A-Class", "type": "Sedan", "year": 2020}, {"id": 108, "CarMake": "Mercedes", "CarModel": "A-Class", "type": "Sedan", "year": 2021}, {"id": 53, "CarMake": "Mercedes", "CarModel": "A-Class", "type": "Sedan", "year": 2022}, {"id": 67, "CarMake": "Mercedes", "CarModel": "AMG GT", "type": "Coupe", "year": 2023}, {"id": 76, "CarMake": "Mercedes", "CarModel": "C-Class", "type": "Sedan", "year": 2021}, {"id": 9, "CarMake": "Mercedes", "CarModel": "C-Class", "type": "Sedan", "year": 2023}, {"id": 29, "CarMake": "Mercedes", "CarModel": "CLA", "type": "Sedan", "year": 2020}, {"id": 103, "CarMake": "Mercedes", "CarModel": "CLA", "type": "Sedan", "year": 2022}, {"id": 90, "CarMake": "Mercedes", "CarModel": "E-Class", "type": "Sedan", "year": 2021}, {"id": 14, "CarMake": "Mercedes", "CarModel": "E-Class", "type": "Sedan", "year": 2023}, {"id": 57, "CarMake": "Mercedes", "CarModel": "GLA", "type": "SUV", "year": 2021}, {"id": 34, "CarMake": "Mercedes", "CarModel": "GLA", "type": "SUV", "year": 2023}, {"id": 44, "CarMake": "Mercedes", "CarModel": "GLB", "type": "SUV", "year": 2021}, {"id": 95, "CarMake": "Mercedes", "CarModel": "GLC", "type": "SUV", "year": 2020}, {"id": 19, "CarMake": "Mercedes", "CarModel": "GLC", "type": "SUV", "year": 2022}, {"id": 80, "CarMake": "Mercedes", "CarModel": "GLC", "type": "SUV", "year": 2023}, {"id": 4, "CarMake": "Mercedes", "CarModel": "GLE", "type": "SUV", "year": 2020}, {"id": 39, "CarMake": "Mercedes", "CarModel": "GLE Coupe", "type": "SUV", "year": 2022}, {"id": 62, "CarMake": "Mercedes", "CarModel": "GLS", "type": "SUV", "year": 2020}, {"id": 98, "CarMake": "Mercedes", "CarModel": "GLS", "type": "SUV", "year": 2023}, {"id": 71, "CarMake": "Mercedes", "CarModel": "M-Class", "type": "SUV", "year": 2022}, {"id": 24, "CarMake": "Mercedes", "CarModel": "S-Class", "type": "Sedan", "year": 2021}, {"id": 85, "CarMake": "Mercedes", "CarModel": "S-Class", "type": "Sedan", "year": 2022}, {"id": 73, "CarMake": "Nissan", "CarModel": "370Z", "type": "Coupe", "year": 2020}, {"id": 26, "CarMake": "Nissan", "CarModel": "370Z", "type": "Coupe", "year": 2023}, {"id": 87, "CarMake": "Nissan", "CarModel": "Altima", "type": "Sedan", "year": 2020}, {"id": 11, "CarMake": "Nissan", "CarModel": "Altima", "type": "Sedan", "year": 2022}, {"id": 36, "CarMake": "Nissan", "CarModel": "Armada", "type": "SUV", "year": 2021}, {"id": 110, "CarMake": "Nissan", "CarModel": "Armada", "type": "SUV", "year": 2022}, {"id": 97, "CarMake": "Nissan", "CarModel": "Cube", "type": "Hatchback", "year": 2022}, {"id": 59, "CarMake": "Nissan", "CarModel": "Cube", "type": "Hatchback", "year": 2023}, {"id": 100, "CarMake": "Nissan", "CarModel": "Juke", "type": "SUV", "year": 2021}, {"id": 64, "CarMake": "Nissan", "CarModel": "Juke", "type": "SUV", "year": 2022}, {"id": 46, "CarMake": "Nissan", "CarModel": "Juke", "type": "SUV", "year": 2023}, {"id": 16, "CarMake": "Nissan", "CarModel": "Maxima", "type": "Sedan", "year": 2021}, {"id": 92, "CarMake": "Nissan", "CarModel": "Maxima", "type": "Sedan", "year": 2023}, {"id": 21, "CarMake": "Nissan", "CarModel": "Murano", "type": "SUV", "year": 2020}, {"id": 82, "CarMake": "Nissan", "CarModel": "Murano", "type": "SUV", "year": 2021}, {"id": 1, "CarMake": "Nissan", "CarModel": "Pathfinder", "type": "SUV", "year": 2023}, {"id": 6, "CarMake": "Nissan", "CarModel": "Rogue", "type": "SUV", "year": 2022}, {"id": 41, "CarMake": "Nissan", "CarModel": "Sentra", "type": "Sedan", "year": 2020}, {"id": 105, "CarMake": "Nissan", "CarModel": "Versa", "type": "Sedan", "year": 2020}, {"id": 51, "CarMake": "Nissan", "CarModel": "Versa", "type": "Sedan", "year": 2021}, {"id": 31, "CarMake": "Nissan", "CarModel": "Versa", "type": "Sedan", "year": 2022}, {"id": 78, "CarMake": "Nissan", "CarModel": "Versa", "type": "Sedan", "year": 2023}, {"id": 45, "CarMake": "Toyota", "CarModel": "4Runner", "type": "SUV", "year": 2020}, {"id": 99, "CarMake": "Toyota", "CarModel": "4Runner", "type": "SUV", "year": 2022}, {"id": 63, "CarMake": "Toyota", "CarModel": "4Runner", "type": "SUV", "year": 2023}, {"id": 40, "CarMake": "Toyota", "CarModel": "Avalon", "type": "Sedan", "year": 2021}, {"id": 68, "CarMake": "Toyota", "CarModel": "Avalon", "type": "Sedan", "year": 2022}, {"id": 5, "CarMake": "Toyota", "CarModel": "Camry", "type": "Sedan", "year": 2023}, {"id": 20, "CarMake": "Toyota", "CarModel": "Corolla", "type": "Sedan", "year": 2021}, {"id": 81, "CarMake": "Toyota", "CarModel": "Corolla", "type": "Sedan", "year": 2022}, {"id": 77, "CarMake": "Toyota", "CarModel": "Highlander", "type": "SUV", "year": 2020}, {"id": 10, "CarMake": "Toyota", "CarModel": "Highlander", "type": "SUV", "year": 2022}, {"id": 72, "CarMake": "Toyota", "CarModel": "Land Cruiser", "type": "SUV", "year": 2021}, {"id": 109, "CarMake": "Toyota", "CarModel": "Prius", "type": "Hatchback", "year": 2020}, {"id": 54, "CarMake": "Toyota", "CarModel": "Prius", "type": "Hatchback", "year": 2021}, {"id": 35, "CarMake": "Toyota", "CarModel": "Prius", "type": "Hatchback", "year": 2022}, {"id": 91, "CarMake": "Toyota", "CarModel": "RAV4", "type": "SUV", "year": 2020}, {"id": 15, "CarMake": "Toyota", "CarModel": "RAV4", "type": "SUV", "year": 2022}, {"id": 25, "CarMake": "Toyota", "CarModel": "Sienna", "type": "Minivan", "year": 2020}, {"id": 86, "CarMake": "Toyota", "CarModel": "Sienna", "type": "Minivan", "year": 2021}, {"id": 104, "CarMake": "Toyota", "CarModel": "Tacoma", "type": "Pickup", "year": 2021}, {"id": 30, "CarMake": "Toyota", "CarModel": "Tacoma", "type": "Pickup", "year": 2023}, {"id": 50, "CarMake": "Toyota", "CarModel": "Tundra", "type": "Pickup", "year": 2023}, {"id": 58, "CarMake": "Toyota", "CarModel": "Yaris", "type": "Hatchback", "year": 2020}, {"id": 96, "CarMake": "Toyota", "CarModel": "Yaris", "type": "Hatchback", "year": 2023}]}
+Exit code: 0
+
+```
 
 ## Q15
 
@@ -123,69 +144,103 @@ C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screen
 
 
 
-```text
-Command: gh run view 41077796961 --repo PhongLam26/xrwvm-fullstack_developer_capstone
 
-✓ main Capstone CI · 41077796961
-Triggered via push about 1 minute ago
+
+```text
+
+✓ main Capstone CI · 41084078460
+Triggered via push about 4 minutes ago
 
 JOBS
-✓ checks in 49s (ID 124138528760)
+✓ Lint Python Files in 8s (ID 124160498679)
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Set up Python
+  ✓ Install dependencies
+  ✓ Print working directory
+  ✓ Run Linter
+  ✓ Post Set up Python
+  ✓ Post Checkout Repository
+  ✓ Complete job
+✓ checks in 1m57s (ID 124160498880)
+  ✓ Set up job
+  ✓ Run actions/checkout@v4
+  ✓ Run actions/setup-python@v5
+  ✓ Run pip install -r server/requirements.txt
+  ✓ Run python manage.py check
+  ✓ Run python manage.py test
+  ✓ Run actions/setup-node@v4
+  ✓ Run npm ci
+  ✓ Run npm run build
+  ✓ Run npm ci && npm test
+  ✓ Run docker compose build
+  ✓ Build Django deployment image
+  ✓ Build Code Engine database service image
+  ✓ Post Run actions/setup-node@v4
+  ✓ Post Run actions/setup-python@v5
+  ✓ Post Run actions/checkout@v4
+  ✓ Complete job
+✓ Lint JavaScript Files in 9s (ID 124160499339)
+  ✓ Set up job
+  ✓ Checkout Repository
+  ✓ Install Node.js
+  ✓ Install JSHint
+  ✓ Run Linter
+  ✓ Post Install Node.js
+  ✓ Post Checkout Repository
+  ✓ Complete job
 
 ANNOTATIONS
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Lint Python Files: .github#2
+
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+Lint Python Files: .github#1
+
 ! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 checks: .github#2
 
 - "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
 checks: .github#1
 
+! Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+Lint JavaScript Files: .github#2
 
-For more information about the job, try: gh run view --job=124138528760
-View this run on GitHub: https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/actions/runs/41077796961
+- "The ubuntu-latest label will migrate to Ubuntu 26 beginning October 19, 2026. For more information, see https://github.com/actions/runner-images/issues/14748"
+Lint JavaScript Files: .github#1
 
-Command: gh run view 41077796961 --repo PhongLam26/xrwvm-fullstack_developer_capstone --json jobs --jq .jobs[].steps[]
-1. Set up job: completed/success
-2. Run actions/checkout@v4: completed/success
-3. Run actions/setup-python@v5: completed/success
-4. Run pip install -r server/requirements.txt: completed/success
-5. Run python manage.py check: completed/success
-6. Run python manage.py test: completed/success
-7. Run actions/setup-node@v4: completed/success
-8. Run npm ci: completed/success
-9. Run npm run build: completed/success
-10. Run npm ci && npm test: completed/success
-11. Run docker compose build: completed/success
-20. Post Run actions/setup-node@v4: completed/success
-21. Post Run actions/setup-python@v5: completed/success
-22. Post Run actions/checkout@v4: completed/success
-23. Complete job: completed/success
+
+For more information about a job, try: gh run view --job=<job-id>
+View this run on GitHub: https://github.com/PhongLam26/xrwvm-fullstack_developer_capstone/actions/runs/41084078460
+
 ```
-
-Full runner log: `evidence/text/CICD-full.txt`.
-
-Verified source commit: `ff1e55641e0488e6821fc91040e42f95ee6e23b6`.
 
 ## Q23
 
 
-BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
+
+https://cars-web.2gkdcb8j96ze.us-south.codeengine.appdomain.cloud
 
 ## Q24
 
 
-BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\deployed_landingpage.png
 
 ## Q25
 
 
-BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\deployed_loggedin.png
 
 ## Q26
 
 
-BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\deployed_dealer_detail.png
 
 ## Q27
 
 
-BLOCKED — IBM Cloud deployment omitted at the user's explicit request on 2026-10-30. No deployment URL or screenshot is claimed.
+
+C:\Users\phong\Downloads\crs\cars-dealership-capstone\submission\evidence\screenshots\deployed_add_review.png
